@@ -3,7 +3,8 @@
 
 int main()
 {
-    /* Soluci�n para el problema #1 de Project Euler
+    /* Solución para el problema #1 de Project Euler
+     * "Encuentra la suma de todos los múltiplos de 3 o 5 por debajo de 1000."
      * https://projecteuler.net/problem=1            */
     int suma = 0;
     for (int i = 0; i < 1000; i++){
