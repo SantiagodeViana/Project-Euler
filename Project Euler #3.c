@@ -6,9 +6,11 @@ long long int  esPrimo(long long int n);
 
 int main()
 {
-    /* Soluci髇 para el problema #3 de Project Euler
-     * "緾u醠 es el mayor factor primo del n鷐ero 600851475143?"
-     * https://projecteuler.net/problem=3            */
+    /* Soluci贸n para el problema #3 de Project Euler
+     * "驴Cu谩l es el mayor factor primo del n煤mero 600851475143?"
+     * https://projecteuler.net/problem=3            
+     * La versi贸n actual del c贸digo alcanza la soluci贸n, pero no termina el bucle; considerar correcci贸n
+     */
 
     long long int respuesta = 1;
     for (long long int i = 1; i < 600851475143; i++){
@@ -21,12 +23,12 @@ int main()
     return 0;
 }
 
-long long int esPrimo(long long int n){//Funci髇 para determinar si un numero es primo, basada en la Criba de Erat髎tenes
+long long int esPrimo(long long int n){//Funci贸n para determinar si un numero es primo, basada en la Criba de Erat贸stenes
     if (n == 1) return 1; ////*Cambiar a 0 o mantener a conveniencia del programa
     else if (n < 4) return 1; //Si son menores de 4, son primos
     else if (n % 2 == 0) return 0; //Si son pares, no son primos
     else if (n < 9) return 1; //Si son menores de 9 e impares, son primos
-    else if (n % 3 == 0) return 0; //Si son m鷏tiplos de 3, no son primos
+    else if (n % 3 == 0) return 0; //Si son m煤ltiplos de 3, no son primos
     else{
         int r = floor(sqrt(n));
         int f = 5;
