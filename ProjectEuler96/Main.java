@@ -9,23 +9,10 @@ public class Main {
 
         Matriz.inicializarVisitados(matriz, visitados);
         Matriz.printValores(matriz);
-        Matriz.printVisitados(visitados);
+        //Matriz.printVisitados(visitados);
 
-        //System.out.println("La solución es final es: " + Sudoku.Solucion(matriz, visitados));
+        Sudoku.solucion(matriz, visitados);
+        Matriz.printValores(matriz);
+        
     }
 }
-
-/*
-        for (int i = 0; i < N; i++) { //Inicializando matriz de visitados
-            if ((i) % 3 == 0) System.out.println("______________________________");
-            for (int j = 0; j < N; j++){
-                if (matriz[i][j] == 0) visitados[i][j] = true;
-                else visitados[i][j] = false;
-                if (j % 3 == 0) System.out.print("|");
-                System.out.print(" " + matriz[i][j] + " ");
-                if (j == N - 1) System.out.print("|");
-            }
-            System.out.println();
-            if (i == N-1) System.out.println("______________________________");
-        }
- */
