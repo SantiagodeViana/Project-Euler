@@ -1,4 +1,6 @@
 public class Matriz {
+    private int valor;
+    private boolean visitado;
 
     public static void inicializarVisitados(int matriz[][], boolean visitados[][]) {
         int N = visitados.length;
@@ -8,6 +10,7 @@ public class Matriz {
             }
         }
     }
+
     public static void printValores(int matriz[][]){
         int N = matriz.length;
         for (int i = 0; i < N; i++) { //Inicializando matriz de visitados
@@ -21,6 +24,7 @@ public class Matriz {
             if (i == N-1) System.out.println("______________________________");
         }
     }
+    
     public static void printVisitados (boolean visitados[][]){
         int N = visitados.length;
         for (int i = 0; i < N; i++) { //Inicializando matriz de visitados
