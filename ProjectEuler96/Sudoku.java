@@ -4,24 +4,32 @@ public class Sudoku {
         Matriz.inicializarVisitados(matriz, visitados);
         solucionAux(matriz, visitados, 0, 0);
 
-        for (int j = 0; j < 2; j++) {
-            if (j == 0) respuesta += (matriz[0][j] * 100);
-            else if (j == 1) respuesta += (matriz[0][j] * 10);
-            else if (j == 2) respuesta += (matriz[0][j]);
-        }
+        respuesta += matriz[0][0] * 100;
+        respuesta += matriz[0][1] * 10;
+        respuesta += matriz[0][2];
 
+        System.out.println(respuesta);
+        Matriz.printValores(matriz);
         return respuesta;
     }
 
     public static boolean solucionAux(int[][]matriz, boolean[][]visitados, int fila, int columna) {
         int valor = 1;
-        int i = fila, j= columna;
-        boolean solucion = false;
-        if (visitados[visitados.length - 1][visitados.length - 1]) {
-            solucion = true;
-        } else {
-            for (; i < matriz.length; i++) { //Se empiezan todos los caminos
-                for (; j < matriz.length; j++) {
+        int N = matriz.length;
+        int i = 0, j = 0;
+        boolean solucion = visitados[0][0];
+        while (solucion && (i < N-1 || j < N-1)) { //Comprobación de visitados en todos los cuadros
+            if (j < N-1) j++;
+            else{
+                j = 0;
+                i++;
+            }
+            if (!visitados[i][j]) solucion = false;
+        }
+        i = fila;
+        j= columna;
+        for (; i < N; i++) { //Se empiezan todos los caminos
+                for (; j < N; j++) {
                     while (!visitados[i][j] && valor < 10 && !solucion) { //Considerando todos los posibles candidatos para rellenar casilla
                         if (Sudoku.factible(matriz, valor, i, j)) {
                             visitados[i][j] = true;
@@ -37,17 +45,17 @@ public class Sudoku {
                 }
                 j=0;
             }
-        }
         return solucion;
     }
 
     public static boolean factible(int[][] matriz, int valor, int fila, int columna) {
         boolean aceptable = true;
         int i = 0, j = 0;
-        while (aceptable && ((i < matriz.length-1) || (j < matriz.length-1))) { //Comprobación para evitar repeticiones en fila o columna
+        int N = matriz.length;
+        while (aceptable && ((i < N-1) || (j < N-1))) { //Comprobación para evitar repeticiones en fila o columna
             if (matriz[fila][j] == valor || matriz[i][columna] == valor) aceptable = false;
-            if (j < matriz.length - 1) j++; //Moviendo columnas para verificar
-            else if (i < matriz.length - 1) i++; //Moviendo filas para verificar
+            if (j < N - 1) j++; //Moviendo columnas para verificar
+            else if (i < N - 1) i++; //Moviendo filas para verificar
         }
         //Reiniciando contadores
         i = 0;
