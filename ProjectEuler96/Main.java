@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
         /*  Solución para el problema #96 de Project Euler
+         * "Resolviendo cincuenta sudokus, encuentre la suma de los números de 3 cifras que se encuentran en la 
+         * esquina superior izquierda de cada cuadrícula de solución."
          *  https://projecteuler.net/problem=96          */
 
         int [][] sudoku01 = {{0, 0, 3, 0, 2, 0, 6, 0, 0},
