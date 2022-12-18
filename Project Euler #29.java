@@ -1,4 +1,8 @@
 public class Main {
+    /* Solución para el problema #29 de Project Euler
+     * ¿Cuántos términos distintos hay en la secuencia generada por a^b para 2 ≤ a ≤ 100 y 2 ≤ b ≤ 100?
+     * https://projecteuler.net/problem=29
+     */
     public static void main(String[] args) {
         double[] soluciones = new double [100 * 100];
         int i = 0, respuesta = 0;
