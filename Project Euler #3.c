@@ -9,8 +9,7 @@ int main()
     /* Solución para el problema #3 de Project Euler
      * "¿Cuál es el mayor factor primo del número 600851475143?"
      * https://projecteuler.net/problem=3            
-     * La versión actual del código alcanza la solución, pero no termina el bucle; considerar corrección
-     */
+     * La versión actual del código alcanza la solución, pero no termina el bucle; considerar corrección  */
 
     long long int respuesta = 1;
     for (long long int i = 1; i < 600851475143; i++){
