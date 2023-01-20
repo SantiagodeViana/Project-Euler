@@ -36,15 +36,7 @@ public class Main {
             }
         }
 
-
-
-        //
-
         Arbol.printValores(arbol);
-
-
-
-
         System.out.println("La respuesta es: ");
     }
 }
