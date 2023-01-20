@@ -1,0 +1,6 @@
+/* Solución para el problema #15 de Project Euler
+ * "¿Cuántas rutas de este tipo hay a través de una cuadrícula de 20×20?"
+ * https://projecteuler.net/problem=15
+ * /
+
+//Pseudocódigo:
