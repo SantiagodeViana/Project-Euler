@@ -29,17 +29,17 @@ public class PrimeSet {
 
     public static boolean busquedaBinaria(int[] primos, int n, int N){ //Determina si un elemento se encuentra en un array mediante una búsqueda binaria
         //Requiere como entrada un array ordenado
-        if (n < 0 || n > primos[N]) return false; //Rechaza números negativos y superiores al último elemento del array
-        else return busquedaBinariaAux(primos, n, 0, N);
+        if (n < 0 || n > primos[N-1]) return false; //Rechaza números negativos y superiores al último elemento del array
+        else return busquedaBinariaAux(primos, n, 0, N-1);
     }
-
+    
     public static boolean busquedaBinariaAux(int[] primos, int n, int io, int iN){
         boolean encontrado = false;
         int k = (iN+io) / 2;
         if (io == iN){
             if (n != primos[k]) return false;
+            else return true;
         }
-        if (n == primos[k]) return true;
         else{
             while (!encontrado && io != iN){
                 if (n <= primos[k]) return busquedaBinariaAux(primos, n, io, k);
