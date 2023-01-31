@@ -1,42 +1,28 @@
 public class PrimeSet {
-
-    /* Optimiza el tiempo de ejecición a O(log(n)), pero no puede acceder a primos mayores a los elementos del array
-
-    public static boolean busquedaBinaria(int[] primos, int n){;
-        if (n < 0 || n > primos[primos.length-1]) return false;
-        else return busquedaBinariaAux(primos, n, 0, primos.length-1);
-    }
-    public static boolean busquedaBinariaAux(int[] primos, int n, int io, int iN){
-        boolean encontrado = false;
-        int i = 0;
-        int k = (iN+io) / 2;
-        if (io == iN){
-            if (n != primos[k]) return false;
-        }
-        if (n == primos[k]) return true;
-        else{
-            while (!encontrado && io != iN){
-                if (n <= primos[k]) return busquedaBinariaAux(primos, n, io, k);
-                else return busquedaBinariaAux(primos, n, k+1, iN);
+    public static boolean concatenatedPairSet(int n1, int n2, int n3, int n4, int n5){
+        boolean pairSet = true;
+        int cifras = 10, aux, cadena, i = 0, j;
+        int [] set= {n1, n2, n3, n4, n5};
+        while (pairSet && i < set.length){
+            j = i+1;
+            while (pairSet && j < set.length) { //Concadenando desde la derecha
+                while (cifras < set[i]) cifras *= 10;
+                aux = set[j] * cifras;
+                cadena = aux + set[i];
+                //System.out.println(cadena);
+                if (esPrimo(cadena)) { //Concadenando desde la izquierda
+                    cifras = 10; //Reiniciando contador de cifras
+                    while (cifras < set[j]) cifras *= 10;
+                    aux = set[i] * cifras;
+                    cadena = aux + set[j];
+                    //System.out.println(cadena);
+                    if (!esPrimo(cadena)) return false;
+                }
+                else return false;
+                cifras = 10; //Reiniciando contador de cifras
+                j++;
             }
-        }
-        return encontrado;
-    }*/
-
-    public static boolean concatenatedPair(int n1, int n2){
-        boolean pairSet = false;
-        int cifras = 10, aux, cadena;
-        while (cifras < n1) cifras *= 10;
-        aux = n2 * cifras;
-        cadena = aux + n1;
-        //System.out.println(cadena);
-        if (esPrimo(cadena)){
-            cifras = 10;
-            while (cifras < n2) cifras *= 10;
-            aux = n1 * cifras;
-            cadena = aux + n2;
-            //System.out.println(cadena);
-            pairSet = esPrimo(cadena);
+            i++;
         }
         return pairSet;
     }
