@@ -27,8 +27,9 @@ public class PrimeSet {
         return pairSet;
     }
 
-    public static boolean busquedaBinaria(int[] primos, int n, int N){
-        if (n < 0 || n > primos[N]) return false;
+    public static boolean busquedaBinaria(int[] primos, int n, int N){ //Determina si un elemento se encuentra en un array mediante una búsqueda binaria
+        //Requiere como entrada un array ordenado
+        if (n < 0 || n > primos[N]) return false; //Rechaza números negativos y superiores al último elemento del array
         else return busquedaBinariaAux(primos, n, 0, N);
     }
 
