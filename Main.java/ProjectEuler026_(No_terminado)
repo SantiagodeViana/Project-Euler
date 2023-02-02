@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+        int respuesta = 0;
+        for (double i = 2.0; i<1000.0; i++){ //No detecta decimales que lleguen a una longitud de 16; revisar código
+            if (Ciclo.longitudCiclo(1.0 / i) >= respuesta) System.out.println("Una posible respuesta es: " + i); //
+            respuesta = Ciclo.longitudCiclo(1.0 / i);
+        }
+        //La longitud del ciclo es: " + Ciclo.longitudCiclo(respuesta));
+    }
+}
