@@ -1,7 +1,6 @@
 Module Module1
 
     Sub Main()
-
         ' Solución para el problema #11 de Project Euler
         ' "¿Cuál es el mayor producto de cuatro números adyacentes en la misma dirección (arriba, abajo, izquierda, derecha o diagonal) en la cuadrícula 20×20?"
         ' https://projecteuler.net/problem=11
