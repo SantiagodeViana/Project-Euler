@@ -23,6 +23,7 @@ public class Main {
                                      * "Una posible respuesta es: 5923 (3+19+199+2011+3691)"
                                      * "Una posible respuesta es: 1589 (3+23+149+353+1061)"
                                      * "Una posible respuesta es: 1453 (71+89+179+251+863)"
+                                     * 1453 no es aceptado como respuesta; continuar buscando opciones
                                      */
                                 }
                             }
