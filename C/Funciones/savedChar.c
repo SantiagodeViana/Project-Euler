@@ -1,3 +1,5 @@
+//Función usada en Project Euler #89
+
 int savedChar (char romanos[3][50]){ //Determina cuantos caracteres pueden reducirse en un número romano. Depende de la función valorRomano()
     int respuesta = 0, minChar = 0, originalChar = valorRomano(romanos, 0), temp = 0; //Caracteres mínimos que se pueden usar para el número
     while (originalChar > 0){
