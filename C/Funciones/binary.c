@@ -1,3 +1,5 @@
+//Función usada en Project Euler #59
+
 int binary(int n){ //Función que recibe un número en base digital y la convierte en base binaria
     int i, digitos = 0, potencia = 2;
     int j = 1, binario = 0;
