@@ -1,4 +1,8 @@
-def num_digits(n): #Número de dígitos
+# Solución para el problema #25 de Project Euler
+# "¿Cuál es el índice del primer término de la sucesión de Fibonacci que contiene 1000 cifras?"
+# https://projecteuler.net/problem=25
+
+def num_digits(n): #Función que devuelve número de dígitos
 	s = 0
 	while n:
 		s += 1
