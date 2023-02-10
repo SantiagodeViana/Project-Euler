@@ -1,3 +1,5 @@
+//Función usada en Project Euler #59
+
 int XOR(int n, int m){ //Recibe dos números binarios y aplica la operación lógica XOR con ellos
     //Evitar entradas con leading zeros: por alguna razón causa la entrada del parámetro como un número decimal
     int i, respuesta = 0, baseB = 1;  // ***** i = digitos
