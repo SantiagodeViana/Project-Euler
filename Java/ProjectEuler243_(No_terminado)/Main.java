@@ -1,6 +1,6 @@
 public class Main {
     public static void main (String[] args) {
-        int respuesta = Integer.MAX_VALUE, i = 1; //25605369 - primos; 8524467 - impares probados
+        int respuesta = Integer.MAX_VALUE, i = 1; //25605369 - primos; 9203787 - impares probados
         double meta = 15499.0/94744.0, aux; //Se declara el radio objetivo; aux es una variable temporal que almacenarà los radios paulatinamente
         do{ //meta = 0.1635881955585578
             //if (Resilience.esPrimo(i)){ //Se analizan números primos, que tienen probabilidades de tener más coprimos
