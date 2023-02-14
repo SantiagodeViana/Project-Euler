@@ -4,7 +4,7 @@ Module Module1
       '  Solución para el problema #7 de Project Euler
       ' "¿Cuál es el 10 001º número primo?"
       ' https://projecteuler.net/problem=7   
-    ' Código espagueti de 2015; optimizar
+      ' Código espagueti de 2015; optimizar
 
         Dim divisor As Integer = 1
         Dim dividendo As Integer = 1
