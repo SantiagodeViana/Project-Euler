@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Solución para el problema #59 de Project Euler
+ * "Desencripta el mensaje y encuentra la suma de los valores ASCII del texto original."
+ * https://projecteuler.net/problem=59            */
+
 int binary(int n);
 int digitos(int n);
 int XOR(int n, int m);
