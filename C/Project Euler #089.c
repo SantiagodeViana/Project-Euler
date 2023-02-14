@@ -3,6 +3,10 @@
 #include <ctype.h>
 #include <string.h>
 
+/* Solución para el problema #89 de Project Euler
+ * "Encuentra el número de caracteres que se ahorran escribiendo números romanos en su expresión mínima."
+ * https://projecteuler.net/problem=89            */
+
 int valorRomano(char romanos[3][50], int indice);
 int savedChar (char romanos[3][50]);
 
