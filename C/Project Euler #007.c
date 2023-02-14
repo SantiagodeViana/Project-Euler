@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <math.h>
 
+/* Solución para el problema #7 de Project Euler
+ * "¿Cuál es el 10 001º número primo?"
+ * https://projecteuler.net/problem=7            */
+
 int esPrimo(int n);
 
 int main()
