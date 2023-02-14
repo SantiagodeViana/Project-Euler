@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <math.h>
 
+/* Solución para el problema #10 de Project Euler
+ * "Encuentra la suma de todos los números primos inferiores a dos millones."
+ * https://projecteuler.net/problem=10            */
+
 int esPrimo(long long int n);
 
 int main()
