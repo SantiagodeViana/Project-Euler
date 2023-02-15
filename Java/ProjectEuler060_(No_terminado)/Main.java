@@ -1,3 +1,7 @@
+/* Solución para el problema #60 de Project Euler
+ * "Encuentra la menor suma para un conjunto de cinco primos para el que dos primos cualesquiera se concatenan para producir otro primo."
+ * https://projecteuler.net/problem=60 */ 
+
 public class Main {
     public static void main (String[] args){
         //Lista de primos hasta el 5000 con 668 elementos; permitirá un acceso estático para mejorar la rapidez del programa
