@@ -1,3 +1,7 @@
+/* Solución para el problema #243 de Project Euler
+ * "Encuentra el menor denominador d que tenga una resiliencia R(d) < 15499/94744."
+ * https://projecteuler.net/problem=243           */
+
 public class Main {
     public static void main (String[] args) {
         int respuesta = Integer.MAX_VALUE, i = 1; //25605369 - primos; 9203787 - impares probados
