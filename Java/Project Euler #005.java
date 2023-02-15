@@ -1,7 +1,7 @@
 public class Main {
-    // Solución para el problema #5 de Project Euler
-    // "¿Cuál es el menor número positivo divisible por todos los números del 1 al 20?"
-    // https://projecteuler.net/problem=5
+    /* Solución para el problema #5 de Project Euler
+     * "¿Cuál es el menor número positivo divisible por todos los números del 1 al 20?"
+     * https://projecteuler.net/problem=5 */
     public static void main(String[] args) {
         int respuesta = 20;
         boolean aceptable = false; //Boolean para reconocer respuesta
