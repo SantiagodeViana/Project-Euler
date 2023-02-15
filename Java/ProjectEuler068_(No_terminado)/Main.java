@@ -1,3 +1,7 @@
+/* Solución para el problema #68 de Project Euler
+ * "¿Cuál es la cadena máxima de 16 dígitos para un anillo 'mágico' de 5 gon?"
+ * https://projecteuler.net/problem=68 */ 
+
 public class Main {
     public static void main(String[] args) {
        /* Solución para el problema #68 de Project Euler
