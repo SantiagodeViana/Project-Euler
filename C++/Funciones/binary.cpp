@@ -1,3 +1,5 @@
+//Función usada en Project Euler #36
+
 int binary(int n);{ //Recibiendo un decimal, lo convierte y devuelve en binario
 	int pt [21] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576}; //Array potencias de 2
 	int i, binary;
