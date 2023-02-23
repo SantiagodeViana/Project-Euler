@@ -1,5 +1,6 @@
 //Comprueba si un entero es palíndromo
 //Función pendiente por ser optimizada
+
 int palindrome(long long int n){ //Long long int debería presentar problemas cuando es mayor a 2^18
     int i = 1, j, length = 0, digitos[20], temp = n; //i es el multiplicador de 10
     if (n < 10) return 1; //Acepta número de un dígito como palídromos; cambiar a conveniencia
