@@ -7,13 +7,14 @@ def sum_digits(n):
     while n:
         s += n % 10 #Se suman los digitos, uno por uno
         n //= 10
-    return s
+    return (s)
 
 respuesta = 1
 x = 1
 while x <= 100:
-	respuesta *= x
-    	x += 1
-    	print respuesta
-        
-print sum_digits(respuesta)
+    respuesta *= x
+    x += 1
+    print (respuesta)
+  
+print ("La respuesta es: ") #La respuesta es 648
+print (sum_digits(respuesta))
