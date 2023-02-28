@@ -18,7 +18,7 @@ int main()
             printf("El factor primo mayor de 600851475143 es: %lld\n", respuesta);
         }
     }
-    printf("El factor primo mayor de 600851475143 es: %lld\n", respuesta);
+    printf("El factor primo mayor de 600851475143 es: %lld\n", respuesta); //La respuesta es 6857
     return 0;
 }
 
