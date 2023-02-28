@@ -13,6 +13,6 @@ int main()
         n1 = aux;
         if (n2 % 2 == 0) respuesta += n2;
     }
-    printf("La suma de los terminos pares de la sucesión de Fibonacci inferiores a cuatro millones es: %d\n", respuesta);
+    printf("La suma de los terminos pares de la sucesión de Fibonacci inferiores a cuatro millones es: %d\n", respuesta); //La respuesta es 4613732
     return 0;
 }
