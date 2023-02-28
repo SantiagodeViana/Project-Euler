@@ -15,7 +15,7 @@ int main()
         if  (esPrimo(i) == 1) respuesta += i;
     }
 
-    printf("La respuesta es:%lld\n", respuesta);
+    printf("La respuesta es:%lld\n", respuesta); //La respuesta es 142913828922
     return 0;
 }
 
