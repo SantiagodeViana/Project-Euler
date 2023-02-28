@@ -10,5 +10,7 @@ def sum_digits(n):
     return s
 
 x = 2**1000
-print x
-print sum_digits(x)
+
+print(x)
+print("La respuesta es: ") #La respuesta es 1366
+print(sum_digits(x))
