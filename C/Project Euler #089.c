@@ -30,7 +30,7 @@ int main()
     }
 
     respuesta++; //La última entrada no tiene break line; como tal, se suma un caracter más
-    printf("\nRespuesta:%d\n", respuesta);
+    printf("\nRespuesta:%d\n", respuesta); //La respuesta es 743
     printf("Fin del programa.\n");
     fclose(listaRomanos); //Recomendado: Cerrar fichero
     return 0;
