@@ -65,7 +65,7 @@ int main()
         answer += respuesta[x];
         printf("%c", respuesta[x]);
     }
-    printf("La respuesta es: %d.\n", answer);
+    printf("\nLa respuesta es: %d.\n", answer); //La respuesta es 129448
     printf("Fin del programa.\n");
     return 0;
 }
