@@ -15,7 +15,7 @@ int main()
         n++;
         if (esPrimo(n)) respuesta++;
     }
-    printf("\nLa respuesta es %d\n", n);
+    printf("\nLa respuesta es %d\n", n); //La respuesta es 104743
     return 0;
 }
 
