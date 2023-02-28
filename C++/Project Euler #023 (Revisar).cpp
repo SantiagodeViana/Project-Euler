@@ -1,4 +1,4 @@
-/* Revisar
+/* 28/02:2023: Revisar. El código no sale del bucle
  * Solución para el problema #23 de Project Euler
  * "Encuentra la suma de todos los números enteros positivos que no pueden escribirse como suma de dos números abundantes."
  * https://projecteuler.net/problem=23 */
