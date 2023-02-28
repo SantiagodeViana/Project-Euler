@@ -11,6 +11,6 @@ int main()
         if (i % 3 == 0|| i % 5 == 0) suma += i;
         if (i == 9) printf("Suma de multiplos de 3 o 5 menores que 10: %d\n", suma);
     }
-    printf("La suma de multiplos de 3 o 5 menores que 1000 es: %d\n", suma);
+    printf("La suma de multiplos de 3 o 5 menores que 1000 es: %d\n", suma); //La respuesta es 233168
     return 0;
 }
