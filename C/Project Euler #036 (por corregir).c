@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-long long int binary(int n);
-int palindrome(long long int n); //Trae problemas de desbordamiento para binarios
-int binaryPalindrome (int n);
-
-////EULER 36
-/* Imrpime como respuesta 872162, pero la respuesta es 872187, 24 más
+/* Solución para el problema #36 de Project Euler
+ * "Encuentra la suma de todos los números, menores que un millón, que son palíndromos en base 10 y base 2."
+ * https://projecteuler.net/problem=36            
+ *
+ * Devuelve como respuesta 872162, pero la respuesta es 872187, 24 más
  * El presente código excluye a los números de base 10 de un digito.
  * Considerar para futuros programas
  */
+
+long long int binary(int n);
+int palindrome(long long int n); //Trae problemas de desbordamiento para binarios
+int binaryPalindrome (int n);
 
 int main()
 {
