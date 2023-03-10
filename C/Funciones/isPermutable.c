@@ -1,4 +1,4 @@
-//Función usada en Project Euler #52
+//Función usada en Project Euler #49 y #52
 
 int isPermutable(int n, int m, int length){ //Se guardan los digitos del número
     int i, j, cont = 1, digitos[length]; //Se declaran contadores y array; "cont" lleva la coincidencia de los digitos
