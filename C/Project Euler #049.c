@@ -2,9 +2,12 @@
 #include <stdlib.h>
 #include <math.h>
 
-////EULER 49
-//Conseguir tres números de 4 digitos, primos, que compartan dígitos
-/* Actualmente el código muestra los números que comparten digitos, sin límite de la cantidad
+/* Solución para el problema #49 de Project Euler
+ * "¿Qué número de 12 cifras se forma concatenando los tres términos de esta secuencia?"
+ * https://projecteuler.net/problem=49
+
+ * Conseguir tres números de 4 digitos, primos, que compartan dígitos
+ * Actualmente el código muestra los números que comparten digitos, sin límite de la cantidad
  * Por ejemplo, un número puede tener un "9" y otro dos.
  * Sin embargo, las restricciones son tales que ofrece 26 posibilidades y permite discernir manualmente
  * El ejemplo es el número 4: 1497, 4817 y 8147
