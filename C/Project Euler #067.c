@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-////EULER 67
-/* Find the maximum total from top to bottom in triangle.txt (right click and 'Save Link/Target As...'), a 15K text
- * file containing a triangle with one-hundred rows.
-*/
+/* Solución para el problema #67 de Project Euler
+ * "Encuentra el total máximo de arriba a abajo en triangle.txt, un archivo de texto de 15K que contiene un triángulo con cien filas."
+ * https://projecteuler.net/problem=67                     */
 
 int main()
 {
