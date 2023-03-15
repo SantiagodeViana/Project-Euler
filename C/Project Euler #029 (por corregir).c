@@ -4,7 +4,10 @@
 
 int isPrime(int n);
 
-/*
+/*    Solución para el problema #29 de Project Euler
+ *    "¿Cuántos términos distintos hay en la secuencia generada por a^b para 2 ≤ a ≤ 100 y 2 ≤ b ≤ 100?"
+ *    https://projecteuler.net/problem=29         
+ 
  *    Potencias de 2: 4*, 8, 16*, 32, 64*
  *    Potencias de 3: 9*, 27, 81*
  *    Potencias de 4: 16*, 64*
