@@ -4,7 +4,9 @@
 
 int Euclides (int n, int m); //Algoritmo de Euclides
 
-/* PROJECT EULER 66:
+/* Solución para el problema #66 de Project Euler
+ * "Encuentra el valor de D ≤ 1000 en soluciones mínimas de x para las que se obtiene el mayor valor de x."
+ * https://projecteuler.net/problem=66
 
  * El teorema de Bezout garantiza que siempre existirá una ecuación tal que ax + by = d
  * Sabemos también que d es el MCD(a, b), y por lo tanto, cuando d es igual a 1, a y b son números coprimos
