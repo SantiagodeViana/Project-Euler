@@ -6,9 +6,10 @@ int isPrime(int n);
 int left(int n);
 int right(int n);
 
-////EULER 37
-//Encontrar suma de números truncables palíndromos
-
+/* Solución para el problema #37 de Project Euler
+ * "Encuentro la suma de los únicos once números primos que son a la vez truncables de izquierda a derecha y de derecha a izquierda."
+ * https://projecteuler.net/problem=37 */
+ 
 int main()
 {
     int i, j = 10, suma;
