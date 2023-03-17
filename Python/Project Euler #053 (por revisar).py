@@ -1,6 +1,10 @@
 import sys
 sys.setrecursionlimit(10000)
 
+# Solución para el problema #53 de Project Euler
+# "¿Cuántos valores, no necesariamente distintos, son mayores que un millón?"
+# https://projecteuler.net/problem=53
+
 def factorial(n):
         if n == 1:
                 return 1
