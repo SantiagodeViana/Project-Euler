@@ -5,7 +5,10 @@ Module Module1
         Dim n1 As Integer = 0
         Dim respuesta As Long = 1
 
-        'Find the sum of the digits in the number 100!
+        ' Solución para el problema #20 de Project Euler
+        ' "Encuentra la suma de los dígitos del número 100!"
+        ' https://projecteuler.net/problem=20
+        ' Código espagueti de 2016; optimizar
 
         Do Until n = 100
 
