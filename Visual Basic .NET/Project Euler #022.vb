@@ -1,8 +1,11 @@
 Module Module1
 
     Sub Main()
-
-        'What is the total of all the name scores in the file?
+        
+        ' Solución para el problema #22 de Project Euler
+        ' "¿Cuál es el total de todas las puntuaciones de nombres del archivo?"
+        ' https://projecteuler.net/problem=21
+        ' Código espagueti de 2016; optimizar
 
         Dim palabra(5163) As String
 
