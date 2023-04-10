@@ -1,97 +1,124 @@
 Module Module1
 
+    Function isPrime(ByVal n As Integer) As Boolean 'Función para determinar si un numero es primo.
+        If n = 1 Then
+            Return False
+        ElseIf n < 4 Then
+            Return True
+        ElseIf n Mod 2 = 0 Then
+            Return False
+        ElseIf n < 9 Then
+            Return True
+        ElseIf n Mod 3 = 0 Then
+            Return False
+        Else
+            Dim r As Integer = Math.Floor(Math.Sqrt(n))
+            Dim f As Integer = 5
+            Do While f <= r
+                If n Mod f = 0 Then
+                    Return False
+                ElseIf n Mod (f + 2) = 0 Then
+                    Return False
+                Else
+                    f += 6
+                End If
+            Loop
+            Return True
+        End If
+    End Function
+    Function isAbundant(ByVal n As Integer) As Boolean 'Función para determinar si el número es abundante
+        If n < 12 Then
+            Return False
+        ElseIf isPrime(n) Then
+            Return False
+        Else
+            Dim divisor As Integer = Nothing
+            Dim total As Integer = Nothing
+            Do While divisor <= (n / 2)
+                divisor += 1
+                If n Mod divisor = 0 Then
+                    total += divisor
+                End If
+            Loop
+            If total > n Then
+                Return True
+            ElseIf total <= n Then
+                Return False
+            End If
+            Return True
+        End If
+    End Function
+    Function isDeficient(ByVal n As Integer) As Boolean 'Función para determinar si el número es deficiente
+        If n < 12 And n <> 6 Then
+            Return True
+        ElseIf isPrime(n) Then
+            Return True
+        Else
+            Dim divisor As Integer = Nothing
+            Dim total As Integer = Nothing
+            Do While divisor <= (n / 2)
+                divisor += 1
+                If n Mod divisor = 0 Then
+                    total += divisor
+                End If
+            Loop
+            If total < n Then
+                Return True
+            ElseIf total >= n Then
+                Return False
+            End If
+            Return True
+        End If
+    End Function
+    Function isPerfect(ByVal n As Integer) As Boolean 'Función para determinar si el número es perfecto
+        If n = 6 Then
+            Return True
+        End If
+        If n < 12 Then
+            Return False
+        ElseIf isPrime(n) Then
+            Return False
+        Else
+            Dim divisor As Integer = Nothing
+            Dim total As Integer = Nothing
+            Do While divisor <= (n / 2)
+                divisor += 1
+                If n Mod divisor = 0 Then
+                    total += divisor
+                End If
+            Loop
+            If total = n Then
+                Return True
+            Else
+                Return False
+            End If
+            Return True
+        End If
+    End Function
+
     Sub Main()
-
-        'Encuentra la suma de los números amicables menores de 10000
-
-        Dim suma As Integer = 0
-        Dim suma2 As Integer = 0
-        Dim divisor As Integer = 1
-        Dim dividendo As Integer = 1
-        Dim amicable1 As Integer = 0
-        Dim amicable2 As Integer = 0
-        Dim respuesta As Long = 0
-
-        Do Until dividendo > 10000
-
-            'Se buscan y suman los divisores de un número
-
-            If dividendo Mod divisor = 0 Then
-                suma += divisor
-                divisor += 1
-            ElseIf dividendo Mod divisor <> 0 Then
-                divisor += 1
-            End If
-
-            'Al terminar de buscar los divisores, siempre en cuando la suma de los divisores no sea igual al número o nula
-
-            If divisor > (dividendo / 2) And dividendo <> suma And suma > 0 Then
-
-                'Se buscarán amicables, donde el primero es igual al número y el segundo es la suma de divisores.
-
-                amicable1 = dividendo
-                amicable2 = suma
-                divisor = 1
-                dividendo += 1
-                suma = 0
-                suma2 = 0
-
-                'Se buscan y sumas los divisores de la suma de divisores
-
-                Do Until divisor > (amicable2 / 2)
-
-                    If amicable2 Mod divisor = 0 Then
-                        suma2 += divisor
-                        divisor += 1
-                    ElseIf amicable2 Mod divisor <> 0 Then
-                        divisor += 1
-                    End If
+        Dim respuesta As Integer = Nothing
+        Dim n As Integer = Nothing
+        Dim n2 As Integer = Nothing
+        Dim n3 As Integer = Nothing
+        Do Until n2 > (28123 / 2) + 1
+            Do Until isAbundant(n3)
+                n3 += 1
+            Loop
+            If (n2 + n3) > (28123 / 2) + 1 Then
+                n2 += 1
+                Do Until isAbundant(n2)
+                    n2 += 1
                 Loop
-
-            ElseIf divisor > (dividendo / 2) Then
-                suma = 0
-                divisor = 1
-                dividendo += 1
+                n3 = n2
+            ElseIf isAbundant(n2) And isAbundant(n3) Then
+                respuesta += (n2 + n3)
             End If
-
-            'Si el número es amicable, y la suma de sus factores es igual al número anterior, entonces se suma a la respuesta.
-
-            If amicable1 = suma2 Then
-
-                respuesta += amicable1
-                respuesta += amicable2
-
-                Console.Write("Amicable1:")
-                Console.Write(amicable1)
-                Console.Write("   ")
-                Console.Write("Amicable2:")
-                Console.Write(amicable2)
-                Console.Write("   ")
-                Console.Write("Respuesta:")
-                Console.Write(respuesta)
-                Console.Write("   ")
-                Console.Write("Suma2:")
-                Console.WriteLine(suma2)
-
-                divisor = 1
-
-            End If
-
-            If divisor > dividendo Then
-                divisor = 1
-            End If
+            Console.WriteLine(n & "   " & n2 & "   " & n3 & "   " & respuesta)
+            'Console.ReadLine()
+            n3 += 1
         Loop
-
-        'Por alguna razón dos pares de números no se repiten, así que no se puede conseguir la mitad directamente para eliminar las repeticiones
-
-        respuesta = (respuesta - 11088) / 2 + 11088
-
-        Console.Write("Respuesta:")
-        Console.WriteLine(respuesta)
-        Console.Write("La respuesta es ")
-        Console.WriteLine(respuesta)
+        Console.WriteLine("La respuesta es " & respuesta) 'Idk what I'm doing wrong
         Console.ReadLine()
-
     End Sub
-
 End Module
