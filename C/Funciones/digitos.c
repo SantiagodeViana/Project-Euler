@@ -1,4 +1,4 @@
-//Función usada en Project Euler #59
+//Función usada en Project Euler #59 y #387
 
 int digitos(int n){ //Cuenta los dígitos de una cifra
     int respuesta = 0, i = 1;
