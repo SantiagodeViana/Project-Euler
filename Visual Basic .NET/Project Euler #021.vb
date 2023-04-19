@@ -1,4 +1,8 @@
 Module Module1
+    
+    ' Solución para el problema #21 de Project Euler
+    ' https://projecteuler.net/problem=21
+    ' Código espagueti de 2015; optimizar
 
     Sub Main()
         Dim suma As Integer = 0
