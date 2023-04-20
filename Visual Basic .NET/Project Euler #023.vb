@@ -1,4 +1,9 @@
 Module Module1
+    
+    ' Solución para el problema #23 de Project Euler
+    ' "¿Cuál es el total de todas las puntuaciones de nombres del archivo?"
+    ' https://projecteuler.net/problem=23
+    ' Código espagueti de 2016; optimizar
 
     Function isPrime(ByVal n As Integer) As Boolean 'Función para determinar si un numero es primo.
         If n = 1 Then
