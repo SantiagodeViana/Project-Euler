@@ -1,4 +1,9 @@
 Module Module1
+   
+    ' Solución para el problema #28 de Project Euler
+    ' "¿Cuál es la suma de los números de las diagonales de una espiral de 1001 por 1001 formada del mismo modo?"
+    ' https://projecteuler.net/problem=28
+    ' Código espagueti de 2016; optimizar
 
     Dim respuesta As Integer = 1
     Dim n As Integer = 1
