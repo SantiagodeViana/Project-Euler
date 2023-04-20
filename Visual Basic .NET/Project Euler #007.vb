@@ -1,7 +1,7 @@
 Module Module1
 
     Sub Main()
-      '  Solución para el problema #7 de Project Euler
+      ' Solución para el problema #7 de Project Euler
       ' "¿Cuál es el 10 001º número primo?"
       ' https://projecteuler.net/problem=7   
       ' Código espagueti de 2015; optimizar
