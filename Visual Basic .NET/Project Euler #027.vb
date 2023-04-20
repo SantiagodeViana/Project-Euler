@@ -1,8 +1,12 @@
 Module Module1
 
-    'Funcion para determinar si un numero es primo.
+    ' Solución para el problema #27 de Project Euler
+    ' "Encuentra el producto de los coeficientes a y b para la expresión cuadrática que produce el máximo número de primos para valores consecutivos de n,
+    '  empezando por n = 0"
+    ' https://projecteuler.net/problem=27
+    ' Código espagueti de 2016; optimizar
 
-    Function isPrime(ByVal n As Integer) As Integer
+    Function isPrime(ByVal n As Integer) As Integer 'Funcion para determinar si un numero es primo.
         If n <= 0 Then
             Return False
         ElseIf n = 1 Then
