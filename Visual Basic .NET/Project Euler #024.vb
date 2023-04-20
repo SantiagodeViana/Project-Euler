@@ -1,4 +1,10 @@
 Module Module1
+    
+    ' Solución para el problema #24 de Project Euler
+    ' "¿Cuál es la millonésima permutación lexicográfica de los dígitos 0, 1, 2, 3, 4, 5, 6, 7, 8 y 9?"
+    ' https://projecteuler.net/problem=24
+    ' Código espagueti de 2016; optimizar
+        
     Sub Main()
         Dim x0 As Integer = 0
         Dim x1 As Integer = 1
