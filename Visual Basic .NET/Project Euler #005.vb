@@ -1,5 +1,5 @@
 Module Module1
-    '  Solución para el problema #5 de Project Euler
+    ' Solución para el problema #5 de Project Euler
     ' "¿Cuál es el menor número positivo divisible por todos los números del 1 al 20?"
     ' https://projecteuler.net/problem=5
     ' Código espagueti de 2015, optimizar
