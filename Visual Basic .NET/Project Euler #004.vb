@@ -1,5 +1,5 @@
 Module Module1
-    '  Solución para el problema #4 de Project Euler
+    ' Solución para el problema #4 de Project Euler
     ' "Encuentra el palíndromo más grande formado por el producto de dos números de 3 cifras."
     ' https://projecteuler.net/problem=4   
     ' Código espagueti de 2015; considerar optimización
