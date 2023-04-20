@@ -1,4 +1,9 @@
 Module Module1
+    
+    ' Solución para el problema #30 de Project Euler
+    ' "Encuentra la suma de todos los números que se pueden escribir como suma de quintas potencias de sus dígitos."
+    ' https://projecteuler.net/problem=30
+    ' Código espagueti de 2016; optimizar
 
     Function factorial(ByVal number As Long) As Long
         If number <= 1 Then
