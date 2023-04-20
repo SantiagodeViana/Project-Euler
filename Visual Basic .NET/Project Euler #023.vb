@@ -1,7 +1,7 @@
 Module Module1
     
     ' Solución para el problema #23 de Project Euler
-    ' "¿Cuál es el total de todas las puntuaciones de nombres del archivo?"
+    ' "Encuentra la suma de todos los números enteros positivos que no pueden escribirse como suma de dos números abundantes."
     ' https://projecteuler.net/problem=23
     ' Código espagueti de 2016; optimizar
 
