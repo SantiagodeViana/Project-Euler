@@ -1,4 +1,10 @@
 Module Module1
+    
+    ' Solución para el problema #29 de Project Euler
+    ' "¿Cuántos términos distintos hay en la secuencia generada por a^b para 2 ≤ a ≤ 100 y 2 ≤ b ≤ 100?"
+    ' https://projecteuler.net/problem=29
+    ' Código espagueti de 2016; optimizar
+    
     Sub Main()
         Dim a As Integer = 1
         Dim b As Integer = 1
