@@ -1,6 +1,7 @@
 Module Module1
     
     ' Solución para el problema #21 de Project Euler
+    ' "Evalúa la suma de todos los números amicables menores de 10000"
     ' https://projecteuler.net/problem=21
     ' Código espagueti de 2015; optimizar
 
