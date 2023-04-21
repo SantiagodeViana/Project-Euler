@@ -10,7 +10,7 @@ Module Module1
     Dim move As Integer = Nothing
     Dim limit As Integer = 1000
 
-    'Suma todas las líneas diagonales en un espial de 1001 x 1001
+    'Suma todas las líneas diagonales en un espiral de 1001 x 1001
     Function slide()
         n += move
         respuesta = respuesta + n
