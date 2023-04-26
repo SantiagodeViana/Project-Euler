@@ -1,4 +1,4 @@
-'Función usada en Project Euler #27 y #33
+'Función usada en Project Euler #23, #27 y #33
 'Funcion para determinar si un numero es primo.
 
     Function isPrime(ByVal n As Integer) As Integer
