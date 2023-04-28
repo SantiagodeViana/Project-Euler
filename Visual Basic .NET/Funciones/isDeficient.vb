@@ -1,4 +1,4 @@
-'Función usada en Project Euler #023
+'Función usada en Project Euler #23
 
 Function isDeficient(ByVal n As Integer) As Boolean 'Función para determinar si el número es deficiente
         If n < 12 And n <> 6 Then
