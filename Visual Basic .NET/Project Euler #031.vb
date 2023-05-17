@@ -1,5 +1,10 @@
 Module Module1
     Sub Main()
+        
+        ' Solución para el problema #31 de Project Euler
+        ' "¿De cuántas formas diferentes se pueden hacer 2 £ utilizando cualquier número de monedas?"
+        ' https://projecteuler.net/problem=31
+        ' Código espagueti de 2016; optimizar
 
         'In England the currency is made up of pound, £, and pence, p, and there are eight coins in general circulation:
 
