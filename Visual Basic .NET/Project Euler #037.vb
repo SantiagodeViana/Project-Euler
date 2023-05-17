@@ -1,4 +1,10 @@
 Module Module1
+    
+    ' Solución para el problema #37 de Project Euler
+    ' "Encuentra la suma de los once únicos números primos que son truncables de izquierda a derecha y de derecha a izquierda a la vez"
+    ' https://projecteuler.net/problem=37
+    ' Código espagueti de 2016; optimizar
+    
     Function isPrime(ByVal n As Integer) As Boolean 'Función para determinar si un numero es primo.
         If n = 1 Then
             Return False
