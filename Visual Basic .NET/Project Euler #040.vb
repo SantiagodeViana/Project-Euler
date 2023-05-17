@@ -1,4 +1,10 @@
 Module Module1
+    
+    ' Solución para el problema #40 de Project Euler
+    ' "Si dn representa la enésima cifra de la parte fraccionaria, encuentra el valor de la siguiente expresión."
+    ' https://projecteuler.net/problem=40
+    ' Código espagueti de 2016; optimizar
+    
     Sub Main()
         Dim n As Integer = Nothing
         Dim position As Integer = Nothing
