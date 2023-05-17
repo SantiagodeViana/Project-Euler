@@ -1,4 +1,9 @@
 Module Module1
+    
+    ' Solución para el problema #34 de Project Euler
+    ' "Encuentra la suma de todos los números que son iguales a la suma del factorial de sus cifras."
+    ' https://projecteuler.net/problem=34
+    ' Código espagueti de 2016; optimizar
 
     Function factorial(ByVal number As Long) As Long
         If number <= 1 Then
