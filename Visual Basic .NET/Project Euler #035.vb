@@ -1,4 +1,9 @@
 Module Module1
+    
+    ' Solución para el problema #35 de Project Euler
+    ' "¿Cuántos primos circulares hay por debajo de un millón?"
+    ' https://projecteuler.net/problem=35
+    ' Código espagueti de 2016; optimizar
 
     Function isPrime(ByVal n As Integer) As Boolean 'Función para determinar si un numero es primo.
         If n = 1 Then
