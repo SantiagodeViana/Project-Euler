@@ -1,9 +1,15 @@
 Module Module1
+    
+    ' Solución para el problema #33 de Project Euler
+    ' "Si el producto de estas cuatro fracciones se da en sus términos comunes más bajos, encuentra el valor del denominador."
+    ' https://projecteuler.net/problem=33
+    ' Código espagueti de 2016; optimizar
 
     'The fraction 49/98 is a curious fraction, as an inexperienced mathematician in attempting to simplify it may incorrectly believe that 49/98 = 4/8, which is correct, is obtained by cancelling the 9s.
     'We shall consider fractions like, 30/50 = 3/5, to be trivial examples.
     'There are exactly four non-trivial examples of this type of fraction, less than one in value, and containing two digits in the numerator and denominator.
     'If the product of these four fractions is given in its lowest common terms, find the value of the denominator.
+    
     Function isPrime(ByVal n As Integer) As Boolean 'Función para determinar si un numero es primo.
         If n = 1 Then
             Return False
