@@ -1,5 +1,10 @@
 Module Module1
   
+    ' Solución para el problema #41 de Project Euler
+    ' "¿Cuál es el mayor primo pandigital de n dígitos que existe?"
+    ' https://projecteuler.net/problem=41
+    ' Código espagueti de 2016; optimizar
+  
     Function isPrime(ByVal n As Long) As Boolean 'Funcion para determinar si un numero es primo.
         If n = 1 Then
             Return False
