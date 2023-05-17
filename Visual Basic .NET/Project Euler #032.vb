@@ -1,4 +1,10 @@
 Module Module1
+    
+    ' Solución para el problema #32 de Project Euler
+    ' "Halla la suma de todos los productos cuya identidad de multiplicando/producto pueda escribirse como un pandigital de 1 a 9."
+    ' https://projecteuler.net/problem=32
+    ' Código espagueti de 2016; optimizar
+    
     Function pandigital(ByVal input As String) As Boolean 'Función para determinar si el número es pandigital
         Dim number() As Char = input.ToCharArray()
         Dim length As String = (number.Length).ToString
