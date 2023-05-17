@@ -4,7 +4,7 @@ Module Module1
         
         ' Solución para el problema #22 de Project Euler
         ' "¿Cuál es el total de todas las puntuaciones de nombres del archivo?"
-        ' https://projecteuler.net/problem=21
+        ' https://projecteuler.net/problem=22
         ' Código espagueti de 2016; optimizar
 
         Dim palabra(5163) As String
