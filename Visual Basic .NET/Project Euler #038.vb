@@ -1,4 +1,9 @@
 Module Module1
+    
+    ' Solución para el problema #38 de Project Euler
+    ' "¿Cuál es el mayor número pandigital de 9 cifras que puede formarse como producto concatenado de un número entero con (1,2, ... , n) donde n > 1?"
+    ' https://projecteuler.net/problem=38
+    ' Código espagueti de 2016; optimizar
 
     Function pandigital(ByVal input As String) As Boolean 'Función para determinar si el número es pandigital
         Dim number() As Char = input.ToCharArray()
