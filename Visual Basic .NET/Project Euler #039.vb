@@ -1,7 +1,7 @@
 Module Module1
     
     ' Solución para el problema #39 de Project Euler
-    ' "Si dn representa la enésima cifra de la parte fraccionaria, encuentra el valor de la siguiente expresión."
+    ' "¿Para qué valor de p ≤ 1000 se maximiza el número de soluciones?"
     ' https://projecteuler.net/problem=39
     ' Código espagueti de 2016; optimizar
     
