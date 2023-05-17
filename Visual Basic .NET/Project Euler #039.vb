@@ -1,4 +1,10 @@
 Module Module1
+    
+    ' Solución para el problema #39 de Project Euler
+    ' "¿Para qué valor de p ≤ 1000 se maximiza el número de soluciones?"
+    ' https://projecteuler.net/problem=39
+    ' Código espagueti de 2016; optimizar
+    
     Sub Main()
         'El programa busca la cantidad de lados de un triángulo recto con un perímetro determinado
         Dim teorema As Boolean = False
