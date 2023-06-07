@@ -1,5 +1,4 @@
 Module Module1
-
     Sub Main()
         
         ' Solución para el problema #45 de Project Euler
