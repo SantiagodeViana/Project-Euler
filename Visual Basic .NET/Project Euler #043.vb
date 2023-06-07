@@ -1,8 +1,11 @@
 Module Module1
 
-    'Funcion para determinar si un numero es primo.
+    ' Solución para el problema #43 de Project Euler
+    ' "Encuentra la suma de todos los 0 a 9 pandigitales con esta propiedad."
+    ' https://projecteuler.net/problem=43
+    ' Código espagueti de 2016; optimizar
 
-    Function isPrime(ByVal n As Long) As Boolean
+    Function isPrime(ByVal n As Long) As Boolean 'Funcion para determinar si un numero es primo.
         If n = 1 Then
             Return False
         ElseIf n < 4 Then
