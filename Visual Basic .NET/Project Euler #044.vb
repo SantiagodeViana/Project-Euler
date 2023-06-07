@@ -1,6 +1,11 @@
 Module Module1
     Sub Main()
-        'Encuentra la diferencia entre el par de números pentagonales cuya suma y diferencia también son pentagonales.
+        
+        ' Solución para el problema #44 de Project Euler
+        ' "Encuentra la diferencia entre el par de números pentagonales cuya suma y diferencia también son pentagonales."
+        ' https://projecteuler.net/problem=44
+        ' Código de 2016; optimizar
+               
         Dim n1 As Integer = 1
         Dim n2 As Integer = 1
         Dim cuenta1 As Integer = 1
