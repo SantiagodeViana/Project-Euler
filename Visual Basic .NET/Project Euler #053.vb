@@ -1,5 +1,5 @@
 Module Module1
-    Function factorial(ByVal n As Integer) As Long 'Función para un factorial (x!)
+    Function factorial(ByVal n As Integer) As Long 'Función para un factorial (n!)
         If n <= 1 Then
             Return 1
         Else
