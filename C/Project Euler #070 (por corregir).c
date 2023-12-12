@@ -38,12 +38,16 @@ int main()
     /* *****************************
     La respuesta se visualiza
     */
-
-    for (i=8520000; i>=1; i--){ //Primera permutación par: 992416, , desgaste++    ; i=1000000, 567873
-    //99000000, 9500000, 9350000, 9345000, 9250000
+ 
+    FILE *save;
+    save = fopen ("C:\\Users\\santiago.viana\\Desktopsave.txt", "a");
+    for (i=0; i>=1; i--){ //Primera permutación par: 992416, , desgaste++
         if (i%2 == 0){ //Corigiendo: el radio debe ser el menor posible; descartando otros posibles divisores; && i%3 != 0 && i%5 != 0 && i%7 != 0 && i%11 != 0
             phi = Totient(i);
-            if (isPermutable(i, phi, numeros(i)) == 1) printf("i:%d phi:%d\n", i, phi);
+            if (isPermutable(i, phi, numeros(i)) == 1){
+                printf("i:%d phi:%d\n", i, phi);
+                fprintf(save, "i:%d phi:%d\n", i, phi);
+            }
         }
         if (i%10000 == 0) printf("i:%d\n", i);
     }
