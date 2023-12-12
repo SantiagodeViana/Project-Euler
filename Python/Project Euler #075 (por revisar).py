@@ -1,5 +1,7 @@
 respuesta = 0
 
+#Código convertido de C con ChatGPT
+
 for x in range(1, 1500001):
     for y in range(x + 1, 1500001):
         for z in range(y + 1, 1500001):
