@@ -16,17 +16,13 @@ int main()
     long long int binario = 0;
     for (i = 1; i <= 1000000; i++){ //Se comprueban palíndromos base 2 y base 10 menores a un millón
         binario = binary(i);
-        //binaryPalindrome(11);
         if (palindrome(i) == 1){ //Si es palindromo base 10
-            //printf("Base 10: %d\n", i);
             if (binaryPalindrome(i) == 1){
                 suma += i;
                 printf("Base 10: %d Base 2: %lld Suma: %d\n", i, binario, suma); //Si es palindromo base 2
                 //printf("Base 10: %d\n", i);
             }
         }
-        //printf("Base 10: %d Base 2: %lld\n", i, binario);
-        //printf("i:%d %d\n", i, binary(i));
     }
     printf("Suma: %d \n", suma); //Si es palindromo base 2
     printf("La respuesta es: %lld \n", suma); //Si es palindromo base 2
@@ -39,12 +35,10 @@ long long int binary(int n){
     while (potencia <= n){
         potencia *= 2;
         digitos++;
-        //printf("potencia:%d digitos:%d\n", potencia, digitos);
     }
     potencia /= 2;
     for (i = 1; i <= digitos; i++){
         j *= 10;
-        //printf("j:%lld\n", j);
     }
     while (potencia != 1){
         //printf("n:%d potencia:%d j:%lld binario:%lld\n", n, potencia, j, binario);
@@ -72,7 +66,6 @@ int palindrome(long long int n){ //Comprueba si es palíndromo
     for (j=0; j < length/2; j++){
         if (i == 0) digitos[j] = 0;
         else digitos[j] = (temp/i);// Se va rellenando el array con los primeros números
-        //printf("primero: %d\n", (temp/i));
         temp %= i; //Se va acortando el número de izquierda a derecha
         i/= 10;
     }
@@ -92,7 +85,6 @@ int binaryPalindrome (int n){ //Creando especialmente para evitar problemas de d
     while (potencia <= n){
         potencia *= 2;
         digitos++;
-        //printf("potencia:%d digitos:%d\n", potencia, digitos);
     }
     potencia /= 2;
     for (i=0; potencia != 1; i++){
@@ -110,26 +102,3 @@ int binaryPalindrome (int n){ //Creando especialmente para evitar problemas de d
     }
     return 1;
 }
-
-/*
-int palindrome(int n){ //Comprueba si es palíndromo; cambiando a uso de arrays
-    int i = 1, digitos = 0;
-    while (i < n){
-        i *= 10;
-        digitos++;
-    }
-    if (digitos == 1) return 0;
-    if (digitos % 2 != 0 || (n/i == n%i)) return 1;
-    if (digitos % 2 != 0 || (n/(i*10) == n%(i/10))) return 1;
-    return 0;
-}
-    int input = -1;
-    printf("Introduce un numero para determinr si es plindromo. Presiona 0 para salir.\n");
-    while (input !=0){
-        scanf("%d", &input);
-        printf("%d\n", palindrome(100));
-        printf("%d\n", palindrome(1002));
-        printf("%d\n", palindrome(537));
-        printf("%d\n", palindrome(735));
-    }
-*/
