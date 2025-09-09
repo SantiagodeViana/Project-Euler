@@ -4,10 +4,6 @@
 /* Solución para el problema #36 de Project Euler
  * "Encuentra la suma de todos los números, menores que un millón, que son palíndromos en base 10 y base 2."
  * https://projecteuler.net/problem=36            
- *
- * Devuelve como respuesta 872162, pero la respuesta es 872187, 24 más
- * El presente código excluye a los números de base 10 de un digito.
- * Considerar para futuros programas
  */
 
 long long int binary(int n);
@@ -18,7 +14,7 @@ int main()
 {
     int i, suma = 0;
     long long int binario = 0;
-    for (i = 10; i <= 1000000; i++){ //Se comprueban palíndromos base 2 y base 10 menores a un millón
+    for (i = 1; i <= 1000000; i++){ //Se comprueban palíndromos base 2 y base 10 menores a un millón
         binario = binary(i);
         //binaryPalindrome(11);
         if (palindrome(i) == 1){ //Si es palindromo base 10
