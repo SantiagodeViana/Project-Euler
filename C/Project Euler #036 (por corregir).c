@@ -91,7 +91,7 @@ int palindrome(long long int n){ //Comprueba si es palíndromo
 
 int binaryPalindrome (int n){ //Creando especialmente para evitar problemas de desbordamiento
     int i, digitos = 0, potencia = 2, binario[20];
-    if ((n % 2 == 0) || (n % 10 == 0)) return 0; //There can be no leading zeros, por lo que los números impares no son palíndromos
+    if ((n % 2 == 0) || (n % 10 == 0)) return 0; //"There can be no leading zeros", por lo que los números pares no son palíndromos
     //Tampoco los menores a 10 ni aquellos que terminen en 0 //(n < 10) ||
     while (potencia <= n){
         potencia *= 2;
