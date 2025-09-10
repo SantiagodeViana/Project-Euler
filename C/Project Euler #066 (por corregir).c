@@ -7,6 +7,7 @@
  * https://projecteuler.net/problem=66
 
  * Ecuación de Pell, intenta resolverse mediante el método de Chakravala. Puede continuar intentándose con fracciones continuas
+ * Actualmente el código presenta problemas por overflow, ha sido convertido a Python
  */
 
 int main()
