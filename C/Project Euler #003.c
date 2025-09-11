@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-long long int  esPrimo(long long int n);
+long long int esPrimo(long long int n);
 
 int main()
 {
@@ -39,3 +39,4 @@ long long int esPrimo(long long int n){//Función para determinar si un numero e
         return 1;
     }
 }
+
