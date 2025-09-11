@@ -17,6 +17,7 @@ int main()
 }
 
 int partitions(int n){ //Devuelve el número de particiones de un n mediante un divide y vencerás. Diseñado para PE #76, #77 y #78
+//Queda pendiente considerar particiones >ceil
   int x, y;
   if (n != 1){
     x = ceil(n);
