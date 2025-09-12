@@ -20,8 +20,8 @@ int partitions(int n){ //Devuelve el número de particiones de un n mediante un 
 //Queda pendiente considerar particiones >ceil
   int x, y;
   if (n != 1){
-    x = ceil(n);
-    y = floor(n);
+    x = ceil(n/2);
+    y = floor(n/2);
     return (partitions(x) + partitions(y));
   }
   else return 1;
