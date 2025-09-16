@@ -1,42 +1,47 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /* Solución para el problema #205 de Project Euler
  * "¿Cuál es la probabilidad de que Pyramidal Pete gane a Cubic Colin? Da tu respuesta redondeada a siete decimales de la forma 0.abcdefg"
  * https://projecteuler.net/problem=205 */
 
+#define N1 9
+#define N2 6
+
 int main() {
-    int n1 = 8; // Inicializamos n1 con el tamaño del array ladosPiramidales
-    int n2 = 6; // Inicializamos n2 con el tamaño del array ladosCubicos
-    int ladosPiramidales[n1] = {1, 1, 1, 1, 1, 1, 1, 1}; // 8 elementos
-    int ladosCubicos[n2] = {1, 1, 1, 1, 1, 1}; // 6 elementos
-    double denominador = 0.0, numerador = 0.0, respuesta;
-    while (ladosCubicos[0] != 6 && ladosCubicos[1] != 6 && ladosCubicos[2] != 6 && ladosCubicos[3] != 6 && ladosCubicos[4] != 6 && ladosCubicos[5] <= 6 && ladosPiramidales[0] != 4 && ladosPiramidales[1] != 4 && ladosPiramidales[2] != 4 && ladosPiramidales[3] != 4 && ladosPiramidales[4] != 4 && ladosPiramidales[5] != 4 && ladosPiramidales[6] != 4 && ladosPiramidales[7] != 4) { // Primer bucle (mueve los valores de ladosPiramidales y ladosCubicos)
-        while (ladosCubicos[n2-1] > 6) { // Segundo bucle (secuencia de movimientos de ladosCubicos)
-            ladosCubicos[n2-1] = 1;
-            n2--;
-            ladosCubicos[n2-1]++;
-            if (ladosCubicos[n2-1] <= 6) n2 = 6;
-            denominador++;
+    int i = N1 - 1, j = N2 - 1; // Inicialización de índices
+    int sumaP = 0, sumaC = 0; // Inicialización de resultado de dados
+    int pyramidalPeter[N1] = {1, 1, 1, 1, 1, 1, 1, 1, 1}; // 9 dados de 4 lados
+    int cubicColin[N2] = {1, 1, 1, 1, 1, 1}; // 6 dados de 5 lados
+    double numerador = 0.0, denominador = 0.0, respuesta = 0.0;
+    while (i != -1){
+        while (j != -1){
+            if (cubicColin[j] == 7 ){ //Distinguiendo cantidad máxima del lado de la cantidad de lados
+                cubicColin[j] = 1;
+                while (cubicColin[j] == 7 && j != -1) j--; //Izquierda
+                cubicColin[j]++;
+                j++;
+                while (cubicColin[j] == 7 || j < N2 ) j++; //Derecha
+            }
+            numerador++;
+            for (int i2 = 0; i2 < N1; i2++) sumaP += pyramidalPeter[i2]; //*
+            for (int j2 = 0; j2 < N2; j2++) sumaC += cubicColin[j2]; //*
+            if (pyramidalPeter > cubicColin) denominador++; //Se suman los casos en los que Peter le gana a Colin
+            respuesta = numerador/denominador; //*
+            printf("Peter: %d%2d%2d%2d%2d%2d%2d%2d%2d Colin: %d%2d%2d%2d%2d%2d Probabilidad: %.7f\n", pyramidalPeter[0], pyramidalPeter[1], pyramidalPeter[2], pyramidalPeter[3], pyramidalPeter[4], pyramidalPeter[5], pyramidalPeter[6], pyramidalPeter[7], pyramidalPeter[8], cubicColin[0], cubicColin[1], cubicColin[2], cubicColin[3], cubicColin[4], cubicColin[5], respuesta);
+            cubicColin[j]++;
+            sumaP = 0;
+            sumaC = 0; //Reiniciando valores de sumas
         }
-        
-        for (int i = 0; i < 8; i++) ladosPiramidales[i] = 1; // Re-inicialización de ladosPiramidales para la siguiente iteración
-
-        printf("%d%d%d%d%d%d%d%d   %d%d%d%d%d%d   %.7f   %.7f   %.7f\n", ladosPiramidales[0], ladosPiramidales[1], ladosPiramidales[2], ladosPiramidales[3], ladosPiramidales[4], ladosPiramidales[5], ladosPiramidales[6], ladosPiramidales[7], ladosCubicos[0],  ladosCubicos[1], ladosCubicos[2], ladosCubicos[3], ladosCubicos[4], ladosCubicos[5], numerador, denominador, respuesta);
-        ladosCubicos[n2-1]++; // Avance de ladosCubicos
-        while (ladosPiramidales[n1-1] > 4) {
-            ladosPiramidales[n1-1] = 1;
-            n1--;
-            ladosPiramidales[n1-1]++;
-            if (ladosPiramidales[n1-1] <= 4) n1 = 8;
+         if (pyramidalPeter[i] == 5 ){
+            pyramidalPeter[i] = 1;
+            while (pyramidalPeter[i] == 5 && i != -1) i--; //Izquierda
+            pyramidalPeter[i]++;
+            i++;
+            while (pyramidalPeter[j] == 5 || i < N1 ) i++; //Derecha
         }
-
-        // Determinación del numerador
-        if (ladosPiramidales[0] + ladosPiramidales[1] + ladosPiramidales[2] + ladosPiramidales[3] + ladosPiramidales[4] + ladosPiramidales[5] + ladosPiramidales[6] + ladosPiramidales[7] > ladosCubicos[0] + ladosCubicos[1] + ladosCubicos[2] + ladosCubicos[3] + ladosCubicos[4] + ladosCubicos[5]) numerador++;
-        denominador++;
-        respuesta = numerador / denominador;
-        ladosPiramidales[n1-1]++;
     }
-    
+
     printf("La respuesta es: %.7f\n", respuesta);
     return 0;
 }
