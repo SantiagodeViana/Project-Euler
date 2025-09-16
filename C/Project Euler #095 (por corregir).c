@@ -7,9 +7,7 @@
 int suma_divisores(int n) {
     int suma = 0;
     for (int divisor = 1; divisor <= n / 2; divisor++) {
-        if (n % divisor == 0) {
-            suma += divisor;
-        }
+        if (n % divisor == 0) suma += divisor;
     }
     return suma;
 }
