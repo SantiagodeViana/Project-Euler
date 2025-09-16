@@ -5,10 +5,10 @@
  * https://projecteuler.net/problem=205 */
 
 int main() {
-    int ladosPiramidales[8] = {1, 1, 1, 1, 1, 1, 1, 1}; // 8 elementos
-    int ladosCubicos[6] = {1, 1, 1, 1, 1, 1}; // 6 elementos
     int n1 = 8; // Inicializamos n1 con el tamaño del array ladosPiramidales
     int n2 = 6; // Inicializamos n2 con el tamaño del array ladosCubicos
+    int ladosPiramidales[n1] = {1, 1, 1, 1, 1, 1, 1, 1}; // 8 elementos
+    int ladosCubicos[n2] = {1, 1, 1, 1, 1, 1}; // 6 elementos
     double denominador = 0.0, numerador = 0.0, respuesta;
     while (ladosCubicos[0] != 6 && ladosCubicos[1] != 6 && ladosCubicos[2] != 6 && ladosCubicos[3] != 6 && ladosCubicos[4] != 6 && ladosCubicos[5] <= 6 && ladosPiramidales[0] != 4 && ladosPiramidales[1] != 4 && ladosPiramidales[2] != 4 && ladosPiramidales[3] != 4 && ladosPiramidales[4] != 4 && ladosPiramidales[5] != 4 && ladosPiramidales[6] != 4 && ladosPiramidales[7] != 4) { // Primer bucle (mueve los valores de ladosPiramidales y ladosCubicos)
         while (ladosCubicos[n2-1] > 6) { // Segundo bucle (secuencia de movimientos de ladosCubicos)
