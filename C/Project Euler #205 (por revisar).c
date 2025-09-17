@@ -12,14 +12,17 @@ int main() {
     int i = N1 - 1, j = N2 - 1; // Inicialización de índices
     int sumaP = 0, sumaC = 0, overflowP = 0, overflowC = 0; // Inicialización de resultado de dados
     int pyramidalPeter[N1] = {1, 1, 1, 1, 1, 1, 1, 1, 1}; // 9 dados de 4 lados
-    int cubicColin[N2] = {6, 6, 6, 6, 6, 6}; // 6 dados de 5 lados
+    int cubicColin[N2] = {1, 1, 1, 1, 1, 1}; // 6 dados de 5 lados
     double numerador = 0.0, denominador = 0.0, respuesta = 0.0;
     while (overflowP == 0){
         while (overflowC == 0){
             if (cubicColin[j] == 7){ //Distinguiendo cantidad máxima del lado de la cantidad de lados
                 cubicColin[j] = 1;
                 j--;
-                while (cubicColin[j] == 6) j--; //Izquierda
+                while (cubicColin[j] == 6){
+                    cubicColin[j] = 1;
+                    j--; //Izquierda
+                }
                 cubicColin[j]++;
                 while (cubicColin[j] == 6 || j < N2 - 1) j++; //Derecha
             }
@@ -43,7 +46,10 @@ int main() {
         if (pyramidalPeter[i] == 5){ //Distinguiendo cantidad máxima del lado de la cantidad de lados
             pyramidalPeter[i] = 1;
             i--;
-            while (pyramidalPeter[i] == 4) i--; //Izquierda
+            while (pyramidalPeter[i] == 4){
+                pyramidalPeter[i] = 1;
+                i--; //Izquierda
+            }
             pyramidalPeter[i]++;
             while (pyramidalPeter[i] == 4 || i < N1 - 1) i++; //Derecha
         }
