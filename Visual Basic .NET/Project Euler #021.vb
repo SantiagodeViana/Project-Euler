@@ -13,11 +13,6 @@ Module Module1
         Dim amicable1 As Integer = 0
         Dim amicable2 As Integer = 0
         Dim respuesta As Long = 0
-        
-        ' Solución para el problema #21 de Project Euler
-        ' "Evalúa la suma de todos los números amigables menores de 10000."
-        ' https://projecteuler.net/problem=21
-        ' Código espagueti de 2016; optimizar
 
         Do Until dividendo > 10000
 
