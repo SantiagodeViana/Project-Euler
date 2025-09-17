@@ -27,17 +27,17 @@ int main() {
                 while (cubicColin[j] == 6 || j < N2 - 1) j++; //Derecha
             }
             denominador++;
-            for (int i2 = 0; i2 < N1; i2++) sumaP += pyramidalPeter[i2]; //*
-            for (int j2 = 0; j2 < N2; j2++) sumaC += cubicColin[j2]; //*
+            for (int i2 = 0; i2 < N1; i2++) sumaP += pyramidalPeter[i2]; //Esta operación puede fusionarse con las de arriba. Revisar.
+            for (int j2 = 0; j2 < N2; j2++) sumaC += cubicColin[j2]; //Esta operación puede fusionarse con las de arriba. Revisar.
             if (sumaP > sumaC) numerador++; //Se suman los casos en los que Peter le gana a Colin
-            respuesta = numerador/denominador; //*
-            printf("Peter: %d%2d%2d%2d%2d%2d%2d%2d%2d Colin: %d%2d%2d%2d%2d%2d Probabilidad: %.7f\n", pyramidalPeter[0], pyramidalPeter[1], pyramidalPeter[2], pyramidalPeter[3], pyramidalPeter[4], pyramidalPeter[5], pyramidalPeter[6], pyramidalPeter[7], pyramidalPeter[8], cubicColin[0], cubicColin[1], cubicColin[2], cubicColin[3], cubicColin[4], cubicColin[5], respuesta);
+            respuesta = numerador/denominador;
             cubicColin[j]++;
             if (sumaC == 36) overflowC = 1;
             if (sumaP == 36) overflowP = 1;
             sumaP = 0;
             sumaC = 0; //Reiniciando valores de sumas
         }
+        printf("Peter: %d%2d%2d%2d%2d%2d%2d%2d%2d Colin: %d%2d%2d%2d%2d%2d Probabilidad: %.7f\n", pyramidalPeter[0], pyramidalPeter[1], pyramidalPeter[2], pyramidalPeter[3], pyramidalPeter[4], pyramidalPeter[5], pyramidalPeter[6], pyramidalPeter[7], pyramidalPeter[8], cubicColin[0], cubicColin[1], cubicColin[2], cubicColin[3], cubicColin[4], cubicColin[5], respuesta);
         for (int j2 = 0; j2 < N2; j2++){
             cubicColin[j2] = 1; //Reiniciando dados de Colin
             overflowC = 0;
