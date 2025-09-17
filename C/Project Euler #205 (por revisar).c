@@ -17,28 +17,35 @@ int main() {
     while (i != -1){
         while (j != -1){
             if (cubicColin[j] == 7 ){ //Distinguiendo cantidad máxima del lado de la cantidad de lados
-                cubicColin[j] = 1;
-                while (cubicColin[j] == 7 && j != -1) j--; //Izquierda
+                if (j == 0) j = N2 - 1;
+                else{
+                    cubicColin[j] = 1;
+                    j--; //Izquierda
+                }
                 cubicColin[j]++;
-                j++;
-                while (cubicColin[j] == 7 || j < N2 ) j++; //Derecha
+                while (cubicColin[j] != 6 || j < N2 - 1) j++; //Derecha
             }
-            numerador++;
+            denominador++;
             for (int i2 = 0; i2 < N1; i2++) sumaP += pyramidalPeter[i2]; //*
             for (int j2 = 0; j2 < N2; j2++) sumaC += cubicColin[j2]; //*
-            if (pyramidalPeter > cubicColin) denominador++; //Se suman los casos en los que Peter le gana a Colin
+            if (sumaP > sumaC) numerador++; //Se suman los casos en los que Peter le gana a Colin
             respuesta = numerador/denominador; //*
-            printf("Peter: %d%2d%2d%2d%2d%2d%2d%2d%2d Colin: %d%2d%2d%2d%2d%2d Probabilidad: %.7f\n", pyramidalPeter[0], pyramidalPeter[1], pyramidalPeter[2], pyramidalPeter[3], pyramidalPeter[4], pyramidalPeter[5], pyramidalPeter[6], pyramidalPeter[7], pyramidalPeter[8], cubicColin[0], cubicColin[1], cubicColin[2], cubicColin[3], cubicColin[4], cubicColin[5], respuesta);
+                printf("Peter: %d%2d%2d%2d%2d%2d%2d%2d%2d Colin: %d%2d%2d%2d%2d%2d Probabilidad: %.7f\n", pyramidalPeter[0], pyramidalPeter[1], pyramidalPeter[2], pyramidalPeter[3], pyramidalPeter[4], pyramidalPeter[5], pyramidalPeter[6], pyramidalPeter[7], pyramidalPeter[8], cubicColin[0], cubicColin[1], cubicColin[2], cubicColin[3], cubicColin[4], cubicColin[5], respuesta);
             cubicColin[j]++;
             sumaP = 0;
             sumaC = 0; //Reiniciando valores de sumas
         }
-         if (pyramidalPeter[i] == 5 ){
-            pyramidalPeter[i] = 1;
+        if (pyramidalPeter[i] == 5 ){
+            if (i == 0) j = N2 - 1;
+            else{
+                pyramidalPeter[i] = 1;
+                i--; //Izquierda
+            }
             while (pyramidalPeter[i] == 5 && i != -1) i--; //Izquierda
             pyramidalPeter[i]++;
             i++;
-            while (pyramidalPeter[j] == 5 || i < N1 ) i++; //Derecha
+            while (pyramidalPeter[j] == 5 || i < N1 - 1) i++; //Derecha
+            j = N2;
         }
     }
 
