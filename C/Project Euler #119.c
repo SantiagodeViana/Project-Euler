@@ -5,7 +5,7 @@
  * https://projecteuler.net/problem=119 */
 
 int digitSum(long long int n);
-long long int digitPowerSum(long long int n);
+int digitPowerSum(long long int n);
 
 int main()
 {
@@ -30,7 +30,7 @@ int digitSum(long long int n){ //Función para sumar dígitos de un entero
     }
     return suma;
 }
-long long int digitPowerSum(long long int n){
+int digitPowerSum(long long int n){
     int powerSum = 0, power; //powerSum es un booleano
     long long int suma;
     power = digitSum(n); //Potencia
