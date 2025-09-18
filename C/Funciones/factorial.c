@@ -1,4 +1,4 @@
 int factorial(int n){
-  //Pendiente de desarrollar
-  return 1;
+  if (n == 0) return 1; //Paso base
+  else return (n * factorial(n-1)); //Llamada recursiva
 }
