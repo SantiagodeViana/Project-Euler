@@ -4,6 +4,8 @@ import math
 # https://projecteuler.net/problem=387
 # Código convertido del programa equivalente en C con ChayGPT
 
+# "Respuesta:130459097 i:80402071"
+
 def isPrime(n: int) -> int:
     if n == 1:
         return 1  # (could be 0, depending on your intended definition)
