@@ -3,7 +3,7 @@
 
 ////EULER 97
 //Sólo probando los límites de long long
-//Jamás, ni remotamente, se puede resolver el problema por fuerza bruta con estas condiciones
+//Jamás se puede resolver el problema por fuerza bruta con estas condiciones
 
 int main()
 {
