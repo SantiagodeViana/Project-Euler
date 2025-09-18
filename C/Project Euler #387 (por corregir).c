@@ -56,9 +56,9 @@ int digitos(long long int n){ //Cuenta los dígitos de una cifra
     return respuesta;
 }
 
-int digitSum(long long int n){ //Función para sumar sus dígitos
-    int i, suma = 0;
-    for (i=0; i<=digitos(n)+1;i++){
+int digitSum(long long int n){ //Función para sumar dígitos de un entero
+    int suma = 0;
+    while (n > 0){
         suma += n % 10;
         n/=10;
     }
