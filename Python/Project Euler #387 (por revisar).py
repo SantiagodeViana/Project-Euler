@@ -1,83 +1,88 @@
 import math
 
-#Código convertido de C con ChatGPT
+# Solución para el problema #387 de Project Euler
+# https://projecteuler.net/problem=387
+# Código convertido del programa equivalente en C con ChayGPT
 
-def is_prime(n):
+def isPrime(n: int) -> int:
     if n == 1:
-        return False
+        return 1  # (could be 0, depending on your intended definition)
     elif n < 4:
-        return True
+        return 1  # 2 and 3 are prime
     elif n % 2 == 0:
-        return False
+        return 0
     elif n < 9:
-        return True
+        return 1  # 5 and 7 are prime
     elif n % 3 == 0:
-        return False
+        return 0
     else:
-        r = math.floor(math.sqrt(n))
+        r = int(math.isqrt(n))  # floor(sqrt(n))
         f = 5
         while f <= r:
             if n % f == 0:
-                return False
+                return 0
             elif n % (f + 2) == 0:
-                return False
-            else:
-                f += 6
-        return True
+                return 0
+            f += 6
+        return 1
 
-def digits(n):
-    count = 0
+def digitos(n: int) -> int:
+    respuesta = 0
     i = 1
     while i <= n:
         i *= 10
-        count += 1
-    return count
+        respuesta += 1
+    return respuesta
 
-def digit_sum(n):
-    summation = 0
-    for i in range(digits(n) + 1):
-        summation += n % 10
+def digitSum(n: int) -> int:
+    suma = 0
+    while n > 0:
+        suma += n % 10
         n //= 10
-    return summation
+    return suma
 
-def is_harshad(n):
-    return n % digit_sum(n) == 0
+def isHarshad(n: int) -> int:
+    if n % digitSum(n) == 0:
+        return 1
+    else:
+        return 0
 
-def right_truncatable_harshad(n):
+def rightTruncatableHarshad(n: int) -> int:
     i = 1
-    j = 0
     if n < 10:
-        return False
+        return 0
     else:
         while i < n:
             j = n // i
-            if not is_harshad(j):
-                return False
+            if isHarshad(j) == 0:
+                return 0
             i *= 10
-    return True
+    return 1
 
-def strong_harshad(n):
-    if n % digit_sum(n) != 0:
-        return False
+def strongHarshad(n: int) -> int:
+    if n % digitSum(n) != 0:
+        return 0
     elif n < 10:
-        return False
-    elif is_prime(n // digit_sum(n)):
-        return True
-    return False
+        return 0
+    elif isPrime(n // digitSum(n)) == 1:
+        return 1
+    return 0
 
-def right_truncatable_strong_harshad_prime(n):
-    if not is_prime(n):
-        return False
+def rightTruncatableStrongHarshadPrime(n: int) -> int:
+    if isPrime(n) != 1:
+        return 0
     elif n < 10:
-        return False
+        return 0
     else:
         n //= 10
-        if strong_harshad(n) and right_truncatable_harshad(n):
-            return True
-    return False
+        if strongHarshad(n) == 1 and rightTruncatableHarshad(n) == 1:
+            return 1
+    return 0
 
-respuesta = 0
-for i in range(1, 100001):
-    if right_truncatable_strong_harshad_prime(i):
-        respuesta += i
-        print(f"Respuesta: {respuesta} i: {i}")
+
+if __name__ == "__main__":
+    respuesta = 0
+    for i in range(1, 100001):
+        if rightTruncatableStrongHarshadPrime(i) == 1:
+            respuesta += i
+            print(f"Respuesta:{respuesta} i:{i}")
