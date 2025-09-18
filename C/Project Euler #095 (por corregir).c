@@ -4,7 +4,7 @@
 
 /* Solución para el problema #95 de Project Euler
  * https://projecteuler.net/problem=95            
- * 5916 alcanza un bucle que no regresa a n original. Hay que implementar detección para su descarte
+ * 18/09/2025: 5916 alcanza un bucle que no regresa a n original. Hay que implementar detección para su descarte
  */
 
 int isPrime(int n);
