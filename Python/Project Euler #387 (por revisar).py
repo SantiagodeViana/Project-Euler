@@ -60,11 +60,12 @@ def rightTruncatableHarshad(n: int) -> int:
     return 1
 
 def strongHarshad(n: int) -> int:
-    if n % digitSum(n) != 0:
+    suma = digitSum(n)
+    if n % suma != 0:
         return 0
     elif n < 10:
         return 0
-    elif isPrime(n // digitSum(n)) == 1:
+    elif isPrime(n // suma) == 1:
         return 1
     return 0
 
@@ -82,7 +83,7 @@ def rightTruncatableStrongHarshadPrime(n: int) -> int:
 
 if __name__ == "__main__":
     respuesta = 0
-    for i in range(1, 100001):
+    for i in range(1, 100000000000001):
         if rightTruncatableStrongHarshadPrime(i) == 1:
             respuesta += i
             print(f"Respuesta:{respuesta} i:{i}")
