@@ -2,12 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-//Puede que el problema esté relacionado con un tipo de variable
-//Revisar división, casos de división entre 0
-//La respuesta del ejemplo es mayor de lo que debería hacer
-//Floating point exception (core dumped)
-//...Program finished with exit code 136
-
 int isPrime(long long int n);
 int digitos(long long int n);
 int digitSum(long long int n);
@@ -18,9 +12,13 @@ int rightTruncatableStrongHarshadPrime(long long int n);
 
 int main()
 {
-    //printf("%d", rightTruncatableStrongHarshadPrime(2011));
-    long long int i = 0, respuesta = 0;
-    for (i=1; i <= 100000; i++){
+    /*printf("%d\n", isHarshad(201));
+    printf("%d\n", isHarshad(20));
+    printf("%d\n", isHarshad(1));
+    printf("%d\n", strongHarshad(201));
+    printf("%d\n", rightTruncatableStrongHarshadPrime(2011));*/
+    long long int i, respuesta = 0;
+    for (i=1; i <= 100000000000000; i++){
         if (rightTruncatableStrongHarshadPrime(i) == 1){
             respuesta += i;
             printf("Respuesta:%lld i:%lld\n", respuesta, i);
@@ -30,7 +28,7 @@ int main()
 }
 
 int isPrime(long long int n){//Función para determinar si un numero es primo.
-    if (n == 1) return 1; ////*Cambiar a 0 o mantener a conveniencia del programa
+    if (n == 1) return 1; //*Cambiar a 0 o mantener a conveniencia del programa
     else if (n < 4) return 1; //Si son menores de 4, son primos
     else if (n % 2 == 0) return 0; //Si son pares, no son primos
     else if (n < 9) return 1; //Si son menores de 9 e impares, son primos
@@ -46,7 +44,6 @@ int isPrime(long long int n){//Función para determinar si un numero es primo.
         return 1;
     }
 }
-
 int digitos(long long int n){ //Cuenta los dígitos de una cifra
     int respuesta = 0, i = 1;
     while (i <= n){
@@ -55,7 +52,6 @@ int digitos(long long int n){ //Cuenta los dígitos de una cifra
     }
     return respuesta;
 }
-
 int digitSum(long long int n){ //Función para sumar dígitos de un entero
     int suma = 0;
     while (n > 0){
@@ -82,14 +78,13 @@ int rightTruncatableHarshad(long long int n){ //Desde la derecha
     }
     return 1;
 }
-
 int strongHarshad(long long int n){
-    if (n % digitSum(n) != 0) return 0;
+    int suma = digitSum(n);
+    if (n % suma != 0) return 0;
     else if (n < 10) return 0;
-    else if (isPrime(n/digitSum(n)) == 1) return 1; //Si l división de la suma de sus dígitos es un número primo
+    else if (isPrime(n/suma) == 1) return 1; //l si división de la suma de sus dígitos es un número primo
     return 0;
 }
-
 int rightTruncatableStrongHarshadPrime(long long int n){
     if (isPrime(n) != 1) return 0;
     else if (n < 10) return 0; //Menores que 10 return 0?
