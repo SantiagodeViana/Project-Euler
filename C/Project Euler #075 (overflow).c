@@ -13,13 +13,7 @@ int main()
      * Repetir hasta llegar al límite
      * (Esto debería servir como una buena práctica de modificación de arrays
 
-    /////////////////////////////////////////////////////////////////////////
-
-    13/11/2021:
-    Un error de desbordamiento causa que los cuadrados no sean correctos,
-    y por lo tanto suma respuestas incorrectas.
-    Hay que resolverlo antes de proceder
-    */
+    13/11/2021: Desbordamiento  */
 
     int x, y, z, respuesta = 0;
     long long int xC, yC, zC;
