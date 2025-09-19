@@ -2,37 +2,15 @@
 #include <stdlib.h>
 #include <math.h>
 
-//int isPar (int n);
-//int isDivisor (int n, int m);
 int isPrime(int n);
 int isCoprime(int n, int m, int primos[175]);
 int Euclides (int n, int m); //Algoritmo de Euclides
 
 int main()
 {
-    /*
-    int i; //Prueba de función de primos; todo en orden
-    for (i = 3; i <= 50; i++){
-        if (isPrime(i) == 1) printf("%d\n", i);
-    }
 
-
-    int i, j; //Prueba de función de coprimos; todo en orden
-    for (i = 3; i <= 6; i++){
-        for (j = 2; j <= 30; j++){
-            if (isCoprime(i, j) == 1) printf("%d, %d\n", i, j);
-        }
-    }
-    */
     int i, j; //i numerador, j denominador
     long long int respuesta = 0;
-    //i: 324969, j: 148352 (+1), R: 32100000000
-    //i: 569379 j: 334723 (+1) R: 76500000000
-    //i: 688936 j:471351 (+1) R:97900000000
-    //i: 999820 j:515987 (+1) R:168400000000
-    /*for (i=5; i <= 10; i++){
-        printf("i:%d\n", i);
-    }*/
     for (i=2; i <= 1000000; i++){ //DENOMINADOR
             for (j=1; j<i; j++) if (Euclides (j, i) == 1){ //NUMERADOR
             respuesta++;
@@ -42,28 +20,6 @@ int main()
 
     printf("Fin del programa\n");
     printf("La respuesta es: %lld\n", respuesta);
-    /*
-    int i=0, j=0, numerador, denominador, primos[78500]; // temp;
-    long long int respuesta = 0;
-    for (j=2; j < 1010; j++){
-        if (isPrime(j) == 1){
-            primos[i] = j;
-            //printf("%d, i:%d\n", primos[i], i);
-            i++;
-        }
-    }*/
-    /*for (numerador = 1; numerador <= 1000000; numerador++){
-        //temp = respuesta;
-        for (denominador = 1000000; denominador > numerador; denominador--){
-            if (isCoprime(numerador, denominador, primos) == 1) respuesta++; //Se buscan todos aquellos números coprimos y se suman a la respuesta; juntos son fracciones irreducibles
-        }
-        //Diferencia:%d  , (respuesta-temp)
-        if (numerador % 100 == 0) printf("%lld   %d/%d\n", respuesta, numerador, denominador);
-        //printf("Numerador:%d\n", numerador);
-    } */
-    //printf("Fin del programa\n");
-    //printf("La respuesta es: %lld\n", respuesta);
-
     return 0;
 }
 
@@ -108,13 +64,6 @@ int Euclides (int n, int m){ //Regresa MCD de a y b, donde 0 < b <= a
     int a = n, b = m; //De manera predeterminada se asume que n es mayor que m
     if (a == b) return a; //Si a = b, son iguales al MCD
     if ((a%2 == 0) && (b%2 ==0)) return 2; //Ad hoc: Ambos números pares, es reducible
-    //if (isPrime(m) == 1) return 1; //Ad hoc: Todas las fracciones con un número primo serán irreducibles
-    //if (a < 0) a *= (-1); //Si a es negativo, se convierte en positivo
-    //if (b < 0) a *= (-1); //Si b es negativo, se convierte en positivo
-    /*else if (n < m){ //Si n es menor que m,
-        a = m;
-        b = n;
-    }*/
     while ((a != 0) && (b != 0) && (a != 1) && (b != 1) && (a % b != 0)){ //Los restos se van turnando, de mayor a menor; // && (b % a != 0 &&
         if ((b != 0) && (a != 1) && (b != 1)) a = (a % b);
         if ((a != 0) && (a != 1) && (b != 1)) b = (b % a);
@@ -125,12 +74,6 @@ int Euclides (int n, int m){ //Regresa MCD de a y b, donde 0 < b <= a
     else if (b < a) return b;
     return 1;
 }
-/*
-int isPar (int n){ //Redundante
-    if (n%2 == 0) return 1;
-    return 0;
-}
-
 int isDivisor (int n, int m){
     if (n%m == 0) return 1;
     return 0;
