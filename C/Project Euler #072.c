@@ -5,7 +5,7 @@
 #define N 175
 
 int isPrime(int n);
-int isCoprime(int n, int m, int primos[175]);
+int isCoprime(int n, int m, int primos[N]);
 int Euclides (int n, int m); //Algoritmo de Euclides
 
 int main()
