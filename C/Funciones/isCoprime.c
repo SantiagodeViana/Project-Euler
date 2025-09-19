@@ -1,6 +1,6 @@
 //Función usada en Project Euler #072
 
-int isCoprime(int n, int m, int primos[N]){ //Determina si un par de números son coprimos
+int isCoprime(int n, int m){ //Determina si un par de números son coprimos
     int i, menor;
     if (n > m) menor = m;
     else menor = n; //Declarando menor número
@@ -14,8 +14,9 @@ int isCoprime(int n, int m, int primos[N]){ //Determina si un par de números so
     else if (n < m && m % n == 0) return 0; //Si un número es divisor del otro, no son coprimos
     else if (isPrime(n) == 1 && isPrime(m) == 1) return 1;
     else{
-        for (i=4; primos[i] <= floor(sqrt(menor)); i++){ //Se buscan factores primos
-            if ((n%primos[i]==0 && m%primos[i]==0)) return 0; //Si los números comparten un primo como divisor, no son coprimos
+        for (i=11; i <= floor(sqrt(menor)); i+= 6){ //Se buscan factores primos
+            if ((n%i==0 && m%i==0)) return 0; //Si los números comparten un primo como divisor, no son coprimos
+            else if ((n%(i+2)==0 && m%(i+2)==0)) return 0;
         }
         return 1; //De lo contrario, sí lo son
     }
