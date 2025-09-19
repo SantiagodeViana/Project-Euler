@@ -24,7 +24,7 @@ int main()
         }
         if (x < (y + z)) x++;
         y=4;
-        printf("x:%d y:%d z:%d\n", x, y, z);
+        printf("x:%d y:%d z:%d  Respuesta:%d\n", x, y, z, respuesta);
     }
     printf("La respuesta es: %d\n", respuesta);
     printf("Fin del programa.\n");
