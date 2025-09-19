@@ -61,7 +61,7 @@ int isCoprime(int n, int m){ //Determina si un par de números son coprimos
     else if (n < m && m % n == 0) return 0; //Si un número es divisor del otro, no son coprimos
     else if (isPrime(n) == 1 && isPrime(m) == 1) return 1;
     else{
-        for (i=11; i <= floor(sqrt(menor)); i+= 6){ //Se buscan factores primos
+        for (i=11; i <= menor; i+= 6){ //Se buscan factores primos
             if ((n%i==0 && m%i==0)) return 0; //Si los números comparten un primo como divisor, no son coprimos
             else if ((n%(i+2)==0 && m%(i+2)==0)) return 0;
         }
