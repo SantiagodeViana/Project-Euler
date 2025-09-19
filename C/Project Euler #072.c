@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+#define N 175
+
 int isPrime(int n);
 int isCoprime(int n, int m, int primos[175]);
 int Euclides (int n, int m); //Algoritmo de Euclides
@@ -23,7 +25,7 @@ int main()
     return 0;
 }
 
-int isCoprime(int n, int m, int primos[175]){ //Determina si un par de números son coprimos
+int isCoprime(int n, int m, int primos[N]){ //Determina si un par de números son coprimos
     int i, menor;
     if (n > m) menor = m;
     else menor = n; //Declarando menor número
