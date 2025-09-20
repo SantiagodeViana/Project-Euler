@@ -11,12 +11,6 @@ int digFactChain(int n);
 int main()
 {
     int respuesta = 0;
-    printf("f(145): %d\n", digFactChain(145));
-    printf("f(169): %d\n", digFactChain(69));
-    printf("f(871): %d\n", digFactChain(871));
-    printf("f(872): %d\n", digFactChain(872));
-    printf("f(69): %d\n", digFactChain(69));
-    printf("f(78): %d\n", digFactChain(78));
     for (int i = 10; i <= 1000000; i++){
         if (digFactChain(i) == 60){
             respuesta++;
@@ -61,5 +55,5 @@ int digFactChain(int n){ //Devuelve la cantidad de términos no repetitivos
             longitud++;
         }
     }
-    return longitud;
+    return (pasos + longitud); //La cantidad de los términos no repetitivos son los pasos antes de encontrar el ciclo y su longitud
 }
