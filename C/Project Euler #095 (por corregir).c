@@ -9,8 +9,7 @@ int divSum(int n);
 int amicableChain(int n);
 int main() {
     int aux = 0, respuesta = 0, max = 0;
-    printf("%d\n", amicableChain(12496));
-    for (int i = 1; i < 1000000; i++){
+    /*for (int i = 1; i < 1000000; i++){
         aux = amicableChain(i);
         if (aux != 0){ //Evaluando cadenas no nulas
             if (aux > max){
@@ -18,9 +17,10 @@ int main() {
                 max = aux;
             }
         }
-        printf("Longitud cadena %d: %3d Respuesta %d (%d)\n", i, aux, respuesta, max);
-    }
-    printf("La respuesta es %d \n", respuesta); //i sólo identifica al número que genera la cadena más larga
+        if (i% 1000 == 0) printf("Longitud cadena %d: %3d Respuesta %d (%d)\n", i, aux, respuesta, max); //i sólo identifica al número que genera la cadena más larga
+    }*/
+    respuesta = amicableChain(203034); //Ejecución en dos partes: cadena más larga conseguida, evaluando término más pequeño
+    printf("La respuesta es %d \n", respuesta);
     return 0;
 }
 
@@ -32,30 +32,34 @@ int divSum(int n){
     }
     return div;
 }
-
 int amicableChain(int n){ //Devuelve la "longitud" de la cadena "amigable".
-    int tortuga, liebre, pasos = 0, longitud = 1; //Función basada en el algoritmo de detección de ciclos de Floyd.
+    int tortuga, liebre, pasos = 0, longitud = 1, pow = 1; //Implementando algoritmo de Brent: hace muchas menos llamadas a funciones exigentes, ahorrando mucho tiempo
+    int min = n; //Variable sólo para almacenar valor más pequeño conseguido en una cadena, pedido por el problema
     if (divSum(n) == n) return 0; //Los números "perfectos" no generan cadenas
     else{ //Se agrega condición de que ninguno de los elementos supere el millón
-        tortuga = divSum(n);
-        liebre = divSum(divSum(n));
-        while (tortuga != liebre && tortuga < 1000000){ //Se busca el ciclo
-            tortuga = divSum(tortuga); //Tortuga: un paso
-            liebre = divSum(divSum(liebre)); //Liebre: dos pasos
+        tortuga = n;
+        liebre = divSum(n);
+        while (tortuga != liebre && liebre < 1000000){
+            if (pow == longitud){
+                tortuga = liebre; //Tortuga: un paso
+                pow *= 2;
+                longitud = 0;
+            }
+            liebre = divSum(liebre);
+            longitud++;
         }
-        if (tortuga < 1000000){
-            tortuga = n; //La tortuga vuelve al comienzo
-            while (tortuga != liebre && tortuga < 1000000){ //Se calculan los pasos denotan antes de que empiece el ciclo
+        if (liebre < 1000000){ //Se busca la posición de la primera repetición de la longitud
+            tortuga = n;
+            liebre = n;
+            for (int i = 1; i <= longitud; i++) liebre = divSum(liebre); //La distancia entre la tortuga y liebre es "longitud"
+            while (tortuga != liebre && liebre < 1000000){
                 tortuga = divSum(tortuga);
                 liebre = divSum(liebre); //Tortuga y liebre ahora a misma velocidad
+                if (tortuga < min) min = tortuga;
                 pasos++;
             }
-            liebre = divSum(tortuga);
-            while (tortuga != liebre && tortuga < 1000000){
-                liebre = divSum(liebre); //Se calcula la longitud del ciclo
-                longitud++;
-            }
-            return (pasos + longitud);
+            //return (pasos + longitud);
+            return min;
         }
         else return 0;
     }
