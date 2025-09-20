@@ -40,27 +40,26 @@ int digFact(int n){ //Recibiendo un n, devuelve la suma del factorial de sus dí
     return suma;
 }
 int digFactChain(int n){ //Devuelve la cantidad de términos no repetitivos
-    int tortuga, liebre, noRep = 0; //Función basada en el algoritmo de detección de ciclos de Floyd.
+    int tortuga, liebre, pasos = 0, longitud = 1; //Función basada en el algoritmo de detección de ciclos de Floyd.
     if (n == 145 || n == 40585) return 1; //digFact(n)= n cuando = 145 o 40585, no producen términos no repetitivos
     else{
         tortuga = digFact(n);
         liebre = digFact(digFact(n));
-        printf("Tortuga: %d Liebre: %d\n", tortuga, liebre);
         while (tortuga != liebre){ //Se busca el ciclo
             tortuga = digFact(tortuga); //Tortuga: un paso
             liebre = digFact(digFact(liebre)); //Liebre: dos pasos
-            printf("Tortuga: %d Liebre: %d", tortuga, liebre);
-            getchar();
         }
-        printf("Ciclo encontrado\n");
         tortuga = n; //La tortuga vuelve al comienzo
-        printf("Tortuga: %d Liebre: %d\n", tortuga, liebre);
         while (tortuga != liebre){ //Se calculan los pasos denotan antes de que empiece el ciclo
             tortuga = digFact(tortuga);
             liebre = digFact(liebre); //Tortuga y liebre ahora a misma velocidad
-            noRep++;
-            printf("Tortuga: %d Liebre: %d Pasos: %d\n", tortuga, liebre, noRep);
+            pasos++;
         }
-        return noRep;
+        liebre = digFact(tortuga);
+        while (tortuga != liebre){
+            liebre = digFact(liebre); //Se calcula la longitud del ciclo
+            longitud++;
+        }
     }
+    return longitud;
 }
