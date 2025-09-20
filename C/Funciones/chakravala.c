@@ -1,4 +1,4 @@
-//Método Chakravala para resolver ecuaciones de Pell y otras ecuaciones cuadráticas indeterminadas
+//Método chakravala para resolver ecuaciones de Pell y otras ecuaciones cuadráticas indeterminadas
 //Usado en Project Euler #66
 
 int main()
