@@ -54,6 +54,6 @@ int digFactChain(int n){ //Devuelve la cantidad de términos no repetitivos
             liebre = digFact(liebre); //Se calcula la longitud del ciclo
             longitud++;
         }
+        return (pasos + longitud); //La cantidad de los términos no repetitivos son los pasos antes de encontrar el ciclo y su longitud
     }
-    return (pasos + longitud); //La cantidad de los términos no repetitivos son los pasos antes de encontrar el ciclo y su longitud
 }
