@@ -1,24 +1,31 @@
-//Comprueba si un entero es palíndromo
-//Función pendiente por ser optimizada
+//Función para comprobar si un entero es palíndromo
 
-int isPalindrome(long long int n){ //Long long int debería presentar problemas cuando es mayor a 2^18
-    int i = 1, j, length = 0, digitos[20], temp = n; //i es el multiplicador de 10
-    if (n < 10) return 1; //Acepta número de un dígito como palídromos; cambiar a conveniencia
-    while (i <= n){
-        i *= 10;
-        length++;
+int isPalindrome(long long int n){
+    int palindrome = 1, i = 0, digs = 0; //Declarando digs como contador de digs para reconocer cuando se parte n. Shift guarda el dígito que se mueve de derecha a izquierda
+    long long int aux = 0, pow = 1, left, right;
+    if (n >= 10){
+        while (pow < n){ //Se mide n
+            pow *= 10;
+            digs++;
+        }
+        pow = 1; //Reiniciando pow
+        while (i < digs/2){ //Se mide parte derecha antes de cortar
+            pow *= 10;
+            i++;
+        }
+        left = n % pow; //Se copia la parte derecha para ir copiando a la izquierda
+        if (digs % 2 != 0) right = n % (pow*10); //Se considera medio de número en casos impares
+        else right = n % pow; //Se recorta la derecha
+        while (pow > 1 && left > 0){ //Se mueve la parte derecha a la izquierda, dígito por dígito
+            while (pow > left) pow /= 10;
+            aux = left / pow; //Se agarra el siguiente dígito
+            while (pow < right) pow *= 10;
+            right += aux * pow; //Se prepara para sumar en la izquierda
+            while (pow > left) pow /= 10;
+            left %= pow;
+        }
+        if (right != n) palindrome = 0; //Si el número es diferente después de los cambios, no es palíndromo
     }
-    i /= 10; //Se puede borrar esta línea?
-    for (j=0; j < length/2; j++){
-        if (i == 0) digitos[j] = 0;
-        else digitos[j] = (temp/i); // Se va rellenando el array con los primeros números
-        temp %= i; //Se va acortando el número de izquierda a derecha
-        i/= 10;
-    }
-    temp = n;
-    for (j = 0; j < length/2; j++){
-        if ((temp % 10) != digitos[j]) return 0;
-        temp /= 10; //Se va reduciendo n
-    }
-    return 1;
+    return palindrome;
 }
+
