@@ -17,6 +17,3 @@ int isPrime(int n){ //Función para determinar si un numero es primo, basada en 
         return 1;
     }
 }
-
-
-
