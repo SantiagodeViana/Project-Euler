@@ -12,11 +12,22 @@ int isOctagonal(int n);
 
 int main()
 {
-    printf("%d\n", isCyclical(9090, 1234));
-    printf("%d\n", isCyclical(2468, 1357));
-    printf("%d\n", isCyclical(1111, 2222));
-    printf("%d\n", isCyclical(9876, 5432));
-    printf("%d\n", isCyclical(1234, 5678));
+    int respuesta, i, j, k;
+    for (i = 1000; i < 10000; i++){
+        for (j = 1000; j < 10000; j++){
+            for (k = 1000; k < 100000; k++){
+                if (isCyclical(i, j) == 1 && isCyclical(j, k) == 1 && isCyclical(k, i) == 1){
+                    if ((isTriangle(i) == 1 && isSquare(j) == 1 && isPentagonal(k) == 1) || (isTriangle(j) == 1 && isSquare(k) == 1 && isPentagonal(i) == 1)
+                     || (isTriangle(k) == 1 && isSquare(i) == 1 && isPentagonal(j) == 1)){ //El conjunto debe tener números de un tipo único en cada caso
+                            respuesta = i + j + k;
+                            printf("i:%d, j%d, k:%d   Respuesta:%d\n", i, j, k, respuesta);
+                      }
+                }
+            }
+            if (j % 1000 == 0) printf("i:%d, j%d, k:%d   Respuesta:%d\n", i, j, k, respuesta);
+        }
+    }
+    printf("La respuesta es  %d\n", respuesta);
     return 0;
 }
 
