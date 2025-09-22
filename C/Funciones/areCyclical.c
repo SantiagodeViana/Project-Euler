@@ -1,3 +1,5 @@
+#include <math.h>
+
 //Función usada en Project Euler #61
 
 int areCyclical(int n, int m){ //Compara si un par de números son cíclicos
