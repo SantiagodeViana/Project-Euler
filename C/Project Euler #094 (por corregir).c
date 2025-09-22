@@ -7,21 +7,19 @@
 
 int main()
 {
+    int respuesta = 0, a = 1, b = 1, c;
     long double area, s; //Semiperimetro
-    int respuesta = 0;
-    for (int a = 1; a <= 1000000000; a++){
-        for (int b = a; b <= a+1; b++){
-            for (int c = b; c <= b+1; c++){ //Los bucles se mueven sólo con una unidad de diferencia
-                s = (a + b + c) / 2; //Fórmula de Herón
-                if ((a != b || b != c) && (a == b || b == c)){ //s debe ser un entero. Los lados tampoco pueden ser iguales
-                    area = sqrt(s * (s - a) * (s - b) * (s - c));
-                    if (area == (int)area){
-                        respuesta+= (a + b + c); //Si el área también es un entero, se ha encontrado una respuesta y se suma el perímetro
-                        printf("a:%d b:%d c:%d  Respuesta:%d\n", a, b, c, respuesta);
-                    }
-                }
+    for (c = 2; c <= 1000000000; c++){ //Los bucles se mueven sólo con una unidad de diferencia
+        s = (a + b + c) / 2; //Fórmula de Herón
+        if (s == (int)s){ //s debe ser un entero. Los lados tampoco pueden ser iguales
+            area = sqrt(s * (s - a) * (s - b) * (s - c));
+            if (area == (int)area){
+                respuesta+= (a + b + c); //Si el área también es un entero, se ha encontrado una respuesta
+                printf("a:%d b:%d c:%d  Respuesta:%d\n", a, b, c, respuesta);
             }
-        }
+        } //Se siguen buscando candidatos
+        b++;
+        a++;
     }
     printf("La respuesta es %d\n", respuesta);
     return 0;
