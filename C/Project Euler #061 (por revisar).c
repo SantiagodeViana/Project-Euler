@@ -6,7 +6,9 @@ int areCyclical(int n, int m, int o, int p, int q, int r);
 
 int main()
 {
-    int respuesta, x3, x4, x5, x6, x7, x8, i, j, k, l, m, n; //Respuesta, tipos de números e índices
+    int respuesta, aux, pow, cyclical = 0;
+    int x3, x4, x5, x6, x7, x8; //Números poligonales
+    int i, j, k, l, m, n; //Índices
     for (i = 45; i < 140; i++){ //Los ìndices se modifican para buscar solamente cuatro dìgitos
         x3 = i * (i + 1) / 2; //Triangular
         for (j = 32; j < 99; j++){
@@ -19,9 +21,12 @@ int main()
                         x7 = m * (5 * m - 3) / 2; //Heptagonal
                         for (n = 19; n < 57; n++){
                             x8 = n * (3 * n - 2); //Heptagonal
-                            if (areCyclical(x3, x4, x5, x6, x7, x8) == 1){ //Se consideran todos los ciclos posibles
-                                respuesta = x3 + x4 + x5;
-                            }
+                            cyclical *= (x3 % 100 == x4 / 100);
+                            cyclical *= (x4 % 100 == x5 / 100);
+                            cyclical *= (x5 % 100 == x6 / 100);
+                            cyclical *= (x6 % 100 == x7 / 100);
+                            cyclical *= (x7 % 100 == x8 / 100);
+                            cyclical *= (x8 % 100 == x3 / 100);
                         }
                     }
                 }
@@ -31,20 +36,4 @@ int main()
     }
     printf("La respuesta es  %d\n", respuesta);
     return 0;
-}
-int areCyclical(int n, int m, int o, int p, int q, int r){
-    int cyclical = 0, powN = 1, powM = 1, powO = 1, powP = 1, powQ = 1, powR = 1;
-    while (powN <= n) powN *= 10; //Se mide n
-    while (powM <= m) powM *= 10; //Se mide m
-    while (powO <= o) powO *= 10; //Se mide o
-    while (powP <= p) powP *= 10; //Se mide p
-    while (powQ <= q) powQ *= 10; //Se mide q
-    while (powR <= r) powR *= 10; //Se mide r
-    if (powN == powM && powM == powO && powO == powP && powP == powQ && powQ == powR){ //Los números deben tener la misma longitud para ser cíclicos
-        if (powN != 10 && powM != 10 && powO != 10 && powP != 10 && powQ != 10 && powR != 10){ //Los números de un solo dígito no son cíclicos
-            powN = sqrt(powN); //Mitad del número
-            cyclical = (n % powN == m / powN) && (m % powN == o / powN) && (o % powN == p / powN) && (p % powN == q / powN) && (q % powN == r / powN) && (r % powN == n / powN); //Los números son cíclicos si la parte derecha de n es igual a la parte izquierda de m;
-        }
-    }
-    return cyclical;
 }
