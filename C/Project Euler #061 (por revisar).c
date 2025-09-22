@@ -24,15 +24,18 @@ int main()
     printf("La respuesta es  %d\n", respuesta);
     return 0;
 }
-int areCyclical(int n, int m, int o){
+int areCyclical(int n, int m, int o, int p, int q, int r){
     int cyclical = 0, powN = 1, powM = 1, powO = 1;
     while (powN <= n) powN *= 10; //Se mide n
     while (powM <= m) powM *= 10; //Se mide m
     while (powO <= o) powO *= 10; //Se mide o
-    if (powN == powM && powM == powO){ //Los números deben tener la misma longitud para ser cíclicos
-        if (powN != 10 && powM != 10 && powO != 10){ //Los números de un solo dígito no son cíclicos
+    while (powP <= P) powP *= 10; //Se mide p
+    while (powQ <= q) powQ *= 10; //Se mide q
+    while (powR <= r) powR *= 10; //Se mide r
+    if (powN == powM && powM == powO && powO == powP && powP == powQ && powQ == powR){ //Los números deben tener la misma longitud para ser cíclicos
+        if (powN != 10 && powM != 10 && powO != 10 && powP != 10 && powQ != 10 && powR != 10){ //Los números de un solo dígito no son cíclicos
             powN = sqrt(powN); //Mitad del número
-            if ((n % powN == m / powN) && (m % powN == o / powN) && (o % powN == n / powN)) cyclical = 1; //Los números son cíclicos si la parte derecha de n es igual a la parte izquierda de m;
+            cyclical = (n % powN == m / powN) && (m % powN == o / powN) && (o % powN == p / powN) && (p % powN == q / powN) && (q % powN == r / powN) && (r % powN == n / powN); //Los números son cíclicos si la parte derecha de n es igual a la parte izquierda de m;
         }
     }
     return cyclical;
