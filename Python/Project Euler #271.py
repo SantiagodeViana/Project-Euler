@@ -7,18 +7,14 @@
 # 
 # https://projecteuler.net/problem=271
 
-def modCubo(n):
-    suma = 0
-    for i in range(2, n, 1):  # Sola cuenta números impares
-        aux = i
-        for j in range(2):  # x^2 mod n
-            aux %= n
-            aux *= i
-        if aux % n == 1:
-            suma += i  # suma += x
-            print("x:", i)
-    return suma
+def main():
+    respuesta = 0 
+    for i in range(2, 13082761331670030):
+        if (i*i*i) % 13082761331670030 == 1:
+            respuesta += i
+            print(f"i: {i}")
+        if (i) % 10000000 == 0:
+            print(f"i: {i}")
+    print(f"La respuesta es {respuesta}")
 
-#n = 91
-n = 13082761331670030
-print("La respuesta es:", modCubo(n))
+main()
