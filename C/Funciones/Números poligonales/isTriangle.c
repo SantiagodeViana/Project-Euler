@@ -1,13 +1,7 @@
-//Función mencionada en Project Euler #61
+//Función usada en Project Euler #955
 
-int isTriangle(int n){ //Comprueba si n es un número es triangular
-    int triangle = 0, i = 1, suma = i;
-    if (n > 1){
-        do {
-            suma = i * (i + 1) / 2;
-            if (suma == n) triangle = 1;
-            else i++;
-        } while (triangle == 0 && suma < n);
-    } else triangle = 1;
-    return triangle;
+int isTriangle(long long int n){ //Comprueba si n es un número es triangular
+    long double i;
+    i = (-1 + sqrt(1 + 8*n)) / 2; //Se despeja n y consigue la ecuación cuadrática por efectividad
+    return (i == (long long int)i); //Sólo se acepta el resultado si es un entero
 }
