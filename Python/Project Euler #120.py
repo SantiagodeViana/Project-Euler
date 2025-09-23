@@ -1,8 +1,8 @@
 import sys
 
 # Convirtiendo de Project Euler #120.c
-# Solución para el problema #55 de Project Euler
-# https://projecteuler.net/problem=55
+# Solución para el problema 120 de Project Euler
+# https://projecteuler.net/problem=120
 
 def main():
     respuesta = 0 
