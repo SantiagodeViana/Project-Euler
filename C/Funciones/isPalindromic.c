@@ -1,6 +1,6 @@
 //Función para comprobar si un entero es palíndromo
 
-int isPalindrome(long long int n){
+int isPalindromic(long long int n){
     int palindrome = 1, i = 0, digs = 0; //Declarando digs como contador de digs para reconocer cuando se parte n. Shift guarda el dígito que se mueve de derecha a izquierda
     long long int aux = 0, pow = 1, left, right;
     if (n >= 10){
@@ -28,4 +28,5 @@ int isPalindrome(long long int n){
     }
     return palindrome;
 }
+
 
