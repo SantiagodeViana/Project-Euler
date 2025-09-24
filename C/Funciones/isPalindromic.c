@@ -28,5 +28,3 @@ int isPalindromic(long long int n){
     }
     return palindrome;
 }
-
-
