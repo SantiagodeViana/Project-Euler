@@ -1,0 +1,2 @@
+* Retrabajar problema de amicablePair()
+* Buscar y trabajar problemas de palíndromos
