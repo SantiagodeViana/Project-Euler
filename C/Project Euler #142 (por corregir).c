@@ -7,7 +7,7 @@
 
 int main()
 {
-    int x = 3, y = 2, z = 1, i = 1;
+    int x = 3, y = 2, z = 1, i = 1; //Valores mínimos que cumplen las condiciones
     double raiz; //Evalúa si las expresiones son cuadrados perfecto o no
     long long int respuesta = 0;
     while (respuesta == 0){
