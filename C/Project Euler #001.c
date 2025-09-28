@@ -6,6 +6,7 @@ int main()
     /* Solución para el problema #1 de Project Euler
      * "Encuentra la suma de todos los múltiplos de 3 o 5 por debajo de 1000."
      * https://projecteuler.net/problem=1            */
+    
     int suma = 0;
     for (int i = 0; i < 1000; i++){
         if (i % 3 == 0|| i % 5 == 0) suma += i;
@@ -14,3 +15,4 @@ int main()
     printf("La suma de multiplos de 3 o 5 menores que 1000 es: %d\n", suma); //La respuesta es 233168
     return 0;
 }
+
