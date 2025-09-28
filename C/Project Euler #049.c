@@ -12,8 +12,7 @@
  * Sin embargo, las restricciones son tales que ofrece 26 posibilidades y permite discernir manualmente
  * El ejemplo es el número 4: 1497, 4817 y 8147
  * El resultado del problema es el número 7: 2969, 6299 y 9629
- * La diferencia entre ellos también parece ser 3330
-*/
+ * La diferencia entre ellos también parece ser 3330                  */
 
 int isPrime(int n);
 int isPermutable (int n, int m);
