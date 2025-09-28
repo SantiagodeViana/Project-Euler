@@ -3,6 +3,8 @@
 #include <math.h>
 
 /* Solución para el problema #51 de Project Euler
+ * "Encuentre el número primo más pequeño que, al sustituir parte del número (no necesariamente dígitos adyacentes) por el mismo dígito, 
+ * forme parte de una familia de ocho valores primos."
  * https://projecteuler.net/problem=51            */
 
 #define N 10000
