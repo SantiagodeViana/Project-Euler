@@ -5,6 +5,7 @@ int factorial(int n);
 int digitFactorial(int n);
 
 /* Solución para el problema #34 de Project Euler
+ * "Halla la suma de todos los números que son iguales a la suma del factorial de sus dígitos."
  * https://projecteuler.net/problem=34                     */
 
 int main()
