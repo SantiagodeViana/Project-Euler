@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 /* Solución para el problema #55 de Project Euler
+ * "¿Cuántos números Lychrel hay por debajo de diez mil?"
  * https://projecteuler.net/problem=55            */
 
 int isPalindrome(long long int n);
