@@ -4,6 +4,10 @@
 int combinatoria(int num, int den); //Recibe la combinatoria de dos factoriales.
 //Devuelve 1 si excede un millón, devuelve 0 de lo contrario. Devuelve -1 en caso de error (den > num)
 
+/* Solución para el problema #53 de Project Euler
+ * "¿Cuántos valores, no necesariamente distintos, de (n r) para 1 <= n <= 100, son mayores que un millón?"
+ * https://projecteuler.net/problem=53                                                                          */
+
 int main()
 {
     int i, j, respuesta = 0;
