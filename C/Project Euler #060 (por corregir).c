@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <math.h>
 
-//Hay que arreglar la asignación de primos
+/* Solución para el problema #60 de Project Euler
+ * "Encuentre la suma más baja para un conjunto de cinco números primos en el que dos números primos cualesquiera, al concatenarse, produzcan otro número primo."
+ * https://projecteuler.net/problem=60            
+ * Hay que arreglar la asignación de primos            */
 
 int isPrime(int n);
 int concatenate(int n, int m);
