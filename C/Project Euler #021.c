@@ -11,7 +11,7 @@ int amicablePair(int n, int m);
 int main() {
     int suma = 0;
     for (int i = 1; i <= 10000; i++){
-        for (int j = 1; j <= i; j++){
+        for (int j = 1; j < i; j++){
             if (amicablePair(i, j) == 1){
                 suma += (i+j);
                 printf("i: %d  j: %d Suma: %d\n", i, j, suma);
