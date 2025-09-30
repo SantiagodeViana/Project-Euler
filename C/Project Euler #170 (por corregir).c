@@ -3,6 +3,11 @@
 
 int isPandigital (long long int n);
 
+ /* Solución del problema #170 de Project Euler
+  * "¿Cuál es el mayor producto concatenado de 10 dígitos pandigitales del 0 al 9 de un número entero con otros dos o más números enteros,
+  *  de modo que la concatenación de los números de entrada también sea un número de 10 dígitos pandigital del 0 al 9?"
+  * https://projecteuler.net/problem=170                                     */
+
 int main()
 {
     printf("%d\n", isPandigital(763859124));
@@ -28,7 +33,7 @@ int isPandigital (long long int n){
                 digito++; //Al encontrar el dígito, se procede a buscar el siguiente...
                 aux = 0; //...y se termina la búsqueda en curso
             }
-            else if ((n % 10 == digito) && n < 10) pandigital = 0; //El número no es pandigital si no encuentra se encuentra el dígito en ninguna iteración
+            else if ((n % 10 != digito) && n < 10) pandigital = 0; //El número no es pandigital si no encuentra se encuentra el dígito en ninguna iteración
             n /= 10;
         }
     }
