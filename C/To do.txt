@@ -1,3 +1,3 @@
-* Retrabajar problema de amicablePair()
 * Buscar y trabajar problemas de palíndromos
 * Convertir problemas con overflow
+* Limpiar funciones isPrime()
