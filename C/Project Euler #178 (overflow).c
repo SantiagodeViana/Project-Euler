@@ -10,7 +10,7 @@ int isStepNumber(long long int n);
 int main()
 {
     int respuesta = 0;
-    for (int i = 1; i <= 1000000; i++){
+    for (int i = 1; i <= 10000000000000000000000000000000000000000; i++){
         if (isStepNumber(i) == 1){
             respuesta++;
             printf("i: %d\n", i);
