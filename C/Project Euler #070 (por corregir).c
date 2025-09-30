@@ -9,7 +9,7 @@ int numeros(int n);
 int isPermutable(int n, int m, int length);
 
 /* Solución para el problema #70 de Project Euler
- * "Encuentra el valor de n, 1 < n < 107, para el que φ(n) es una permutación de n y la relación n/φ(n) produce un mínimo."
+ * "Encuentra el valor de n, 1 < n < 10^7, para el que φ(n) es una permutación de n y la relación n/φ(n) produce un mínimo."
  * https://projecteuler.net/problem=70
  
  * 15/12/2020:
