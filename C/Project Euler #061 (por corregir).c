@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <math.h>
 
+ /* Solución para el problema #61 de Project Euler
+  * Halla la suma del único conjunto ordenado de seis números cíclicos de cuatro dígitos en el que cada tipo polígonal:
+  * triángular, cuadrado, pentagonal, hexaonal, heptagonal y octagonal, está representado por un número diferente del conjunto.
+  * https://projecteuler.net/problem=61                          */
+
 int areCyclical(int n, int m, int o, int p, int q, int r);
 
 int main()
