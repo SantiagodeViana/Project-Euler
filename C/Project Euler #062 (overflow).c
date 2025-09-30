@@ -4,8 +4,10 @@
 int isPermutable(long long int n, long long int m, int length);
 int digitos(long long int n);
 
-//EULER 62
-//Problema de desbordamiento
+ /* Solución para el problema #62 de Project Euler
+  * Halla la suma del único conjunto ordenado de seis números cíclicos de cuatro dígitos en el que cada tipo polígonal:
+  * triángular, cuadrado, pentagonal, hexaonal, heptagonal y octagonal, está representado por un número diferente del conjunto.
+  * https://projecteuler.net/problem=61                          */
 
 int main()
 {
