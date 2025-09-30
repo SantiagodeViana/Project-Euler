@@ -5,9 +5,8 @@ int isPermutable(long long int n, long long int m, int length);
 int digitos(long long int n);
 
  /* Solución para el problema #62 de Project Euler
-  * Halla la suma del único conjunto ordenado de seis números cíclicos de cuatro dígitos en el que cada tipo polígonal:
-  * triángular, cuadrado, pentagonal, hexaonal, heptagonal y octagonal, está representado por un número diferente del conjunto.
-  * https://projecteuler.net/problem=61                          */
+  * "Encuentre el cubo más pequeño para el que exactamente cinco permutaciones de sus dígitos sean cubos."
+  * https://projecteuler.net/problem=62                          */
 
 int main()
 {
