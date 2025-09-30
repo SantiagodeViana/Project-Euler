@@ -5,6 +5,8 @@
 int isPrime(int n);
 int isSemiprime(int n);
 
+//i:4440000 R:874155
+
 int main()
 {
     int respuesta = 0;
