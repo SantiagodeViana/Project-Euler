@@ -8,18 +8,18 @@ int Totient(int n);
 int numeros(int n);
 int isPermutable(int n, int m, int length);
 
-// EULER 70
-/* 15/12/2020:
-
+/* Solución para el problema #70 de Project Euler
+ * "Encuentra el valor de n, 1 < n < 107, para el que φ(n) es una permutación de n y la relación n/φ(n) produce un mínimo."
+ * https://projecteuler.net/problem=70
+ 
+ * 15/12/2020:
  * Phi de un número primo n es n-1, ya que ningún número es divisible por él salvo sí mismo.
  * Sabiendo esto, en su momento se intentó comprobar si los números primos y su phi eran permutables, sin éxito
  * Se intentó lo mismo con una variación: los cuadrados de primos
 
  * 22/2/2021:
  Se reemplazó la función isCoprime por el Algoritmo de Euclides, el cual debería hacer la función de Totient mucho más eficiente
- Hay que revisar resultados de la prueba con los cuadrados de los primos.
-
-*/
+ Hay que revisar resultados de la prueba con los cuadrados de los primos. */
 
 int main()
 {
