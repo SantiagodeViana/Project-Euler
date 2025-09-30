@@ -4,12 +4,12 @@
 
 int isPrime(int n);
 
-//Euler 69:
-/*  El programa sólo busca el número con la mayor cadena de divisores primos
-    En otras palabras, el número con la mayor cantidad de divisores
-    En teoría, este es el número que tendría el menor radio de Totient
-    La respuesta es 510510
-*/
+/* Solución para el problema #69 de Project Euler
+ * "Encuentre el valor de n ≤ 1 000 000 para el que n / φ(n) es un máximo"
+ * https://projecteuler.net/problem=69
+ * El programa sólo busca el número con la mayor cadena de divisores primos (el número con la mayor cantidad de divisores)
+ * En teoría, este es el número que tendría el menor radio de Totient
+ * La respuesta es 510510                                                 */
 
 int main()
 {
