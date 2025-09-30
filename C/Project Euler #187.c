@@ -34,7 +34,7 @@ int isPrime(int n){ //Función para determinar si un numero es primo, basada en 
 }
 int isSemiprime(int n){ //Comprueba si n es un "semiprimo": un número compuesto con exactamente dos factores primos
     int i = 2, aux = n, semiprime = 1, count = 0; //i es el divisor, semiprime variable booleana, y count registra la cantidad de factores primos
-    while (i <= n/2){
+    while (i <= n/2 && semiprime == 1){
         while(semiprime == 1 && (aux % i == 0) && aux > 1){
             if (isPrime(i) == 1) count++;
             aux /= i;
