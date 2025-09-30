@@ -5,6 +5,8 @@
 #define N 1000000
 
 /* Solución para el problema #71 de Project Euler
+ * "Al enumerar el conjunto de fracciones propias reducidas para d≤ 1 000 000 en orden ascendente de tamaño, 
+ * encuentra el numerador de la fracción inmediatamente a la izquierda de 3/7"
  * https://projecteuler.net/problem=71                     */
 
 int isPrime(int n);
