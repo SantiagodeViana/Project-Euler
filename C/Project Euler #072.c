@@ -4,6 +4,10 @@
 
 #define N 175
 
+/* Solución para el problema #72 de Project Euler
+ * "¿Cuántos elementos hay en el conjunto de fracciones propias reducidas para d ≤ 1,000,000?"
+ * https://projecteuler.net/problem=72                     */
+
 int isPrime(int n);
 int isCoprime(int n, int m, int primos[N]);
 int Euclides (int n, int m); //Algoritmo de Euclides
