@@ -5,6 +5,7 @@
 #define N 12000
 
 /* Solución para el problema #73 de Project Euler
+ * "¿Cuántas fracciones hay entre 1/3 y 1/2 en el conjunto ordenado de fracciones propias reducidas para d ≤ 12,000?"
  * https://projecteuler.net/problem=73                     */
 
 int isPrime(int n);
