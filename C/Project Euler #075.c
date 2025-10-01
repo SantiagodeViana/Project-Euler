@@ -3,6 +3,10 @@
 
 #define N 1500000
 
+/* Solución para el problema #75 de Project Euler
+ * "¿Cuántas cadenas, con un número inicial menor de un millón, contienen exactamente sesenta términos no repetidos?"
+ * https://projecteuler.net/problem=75                     */
+
 int main()
 {
     int x = 3, y = 4, z = 5, respuesta = 0; //La inicialización es de la menor terna pitagórica
