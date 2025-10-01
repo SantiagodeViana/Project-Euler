@@ -6,6 +6,7 @@ int digFact(int n);
 int digFactChain(int n);
 
 /* Solución para el problema #74 de Project Euler
+ * "¿Cuántas cadenas, con un número inicial menor de un millón, contienen exactamente sesenta términos no repetidos?"
  * https://projecteuler.net/problem=74                     */
 
 int main()
