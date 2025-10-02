@@ -6,7 +6,7 @@
   * "¿Cuál es la suma de todos los números enteros n menores de 150 millones?"
   * https://projecteuler.net/problem=146             */
 
-#define N 1000000
+#define N 150000000
 
 int isPrime(long long int n);
 int primePattern(int n);
@@ -14,14 +14,11 @@ int primePattern(int n);
 int main()
 {
     long long int n, respuesta = 0;
-    for (n = 1; n <= N; n++){
-        if (primePattern(n) == 1){
-            respuesta += n;
-            printf("%d)", n);
-            getchar();
-        }
+    for (n = 9; n <= N; n++){ //primePattern(n) devuelve 1 cuando n = 2, revisar
+        if (primePattern(n) == 1) respuesta += n;
+        if (n % 10000 == 0) printf("%lld) Respuesta: %lld\n", n, respuesta);
     }
-    printf("La respuesta es %d\n", n);
+    printf("La respuesta es %lld\n", respuesta);
     return 0;
 }
 
@@ -42,7 +39,7 @@ int isPrime(long long int n){ //Función para determinar si un numero es primo, 
         return 1;
     }
 }
-int primePattern(int n){ //Comprueba si n^2 + 1, n^2 + 3, n^2 + 7, n^2 + 9, n^2 + 13, y n^2 + 27 son primos consecutivos
+int primePattern(long long int n){ //Comprueba si n^2 + 1, n^2 + 3, n^2 + 7, n^2 + 9, n^2 + 13, y n^2 + 27 son primos consecutivos
     int i, pattern = 0, cons = 1; //Cons cuenta los primos consecutivos, pattern cuenta las coincidencias con la secuencia
     long long int square = n * n;
     if (isPrime(square + 1) == 1){
