@@ -15,8 +15,13 @@ int main()
 {
     long long int n, respuesta = 0;
     for (n = 9; n <= N; n++){ //primePattern(n) devuelve 1 cuando n = 2, revisar
-        if (primePattern(n) == 1) respuesta += n;
-        if (n % 10000 == 0) printf("%lld) Respuesta: %lld\n", n, respuesta);
+        if (primePattern(n) == 1){
+            respuesta += n;
+            printf("%lld) Respuesta: %lld\n", n, respuesta);
+        }
+        //printf("%lld) Respuesta: %lld", n, respuesta);
+        //getchar();
+        //if (n % 10000 == 0)
     }
     printf("La respuesta es %lld\n", respuesta);
     return 0;
@@ -40,36 +45,13 @@ int isPrime(long long int n){ //Función para determinar si un numero es primo, 
     }
 }
 int primePattern(long long int n){ //Comprueba si n^2 + 1, n^2 + 3, n^2 + 7, n^2 + 9, n^2 + 13, y n^2 + 27 son primos consecutivos
-    int i, pattern = 0, cons = 1; //Cons cuenta los primos consecutivos, pattern cuenta las coincidencias con la secuencia
+    int pattern = 1; //Booleano
     long long int square = n * n;
-    if (isPrime(square + 1) == 1){
-        i = square + 1;
-        while (cons <= 5){
-            if (isPrime(i) == 1){ //Se calcula si los siguientes
-                switch (cons) {
-                    case 1:
-                        if (isPrime(square + 3) == 1) pattern++;
-                        break;
-                    case 2:
-                        if (isPrime(square + 7) == 1) pattern++;
-                        break;
-                    case 3:
-                        if (isPrime(square + 9) == 1) pattern++;
-                        break;
-                    case 4:
-                        if (isPrime(square + 13) == 1) pattern++;
-                        break;
-                    case 5:
-                        if (isPrime(square + 27)  == 1) pattern++;
-                        break;
-                    default:
-                        break;
-                }
-                cons++;
-            }
-            i++;
-        }
-    }
-    if (pattern == 5) return 1;
-    else return 0;
+    if (isPrime(square + 1) != 1) pattern = 0;
+    else if (isPrime(square + 3) != 1) pattern = 0;
+    else if (isPrime(square + 7) != 1) pattern = 0;
+    else if (isPrime(square + 9) != 1) pattern = 0;
+    else if (isPrime(square + 13) != 1) pattern = 0;
+    else if (isPrime(square + 27)  != 1) pattern = 0;
+    return pattern;
 }
