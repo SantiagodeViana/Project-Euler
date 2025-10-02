@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
- /* Solución para el problema #134 de  Project Euler
+ /* Solución para el problema #134 de Project Euler
+  * "Encuentra S para cada par de números primos consecutivos con 5 ≤ p ≤ 1000000."
   * https://projecteuler.net/problem=134              */
 
 int isPrime(int n);
@@ -11,7 +12,7 @@ int main()
 {
     int p1 = 5, pow; //n será el número que cumpla con las condiciones
     long long int n, respuesta = 0;
-    for (int p2 = 6; p2 < 1000000; p2++){ //Bucle para buscar p2
+    for (int p2 = 6; p1 < 1000000; p2++){ //Bucle para buscar p2
         if (isPrime(p2) == 1){
             n = p1;
             pow = 1; //Se reinicia "medidor"
