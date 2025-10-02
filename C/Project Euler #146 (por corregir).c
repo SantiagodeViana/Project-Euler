@@ -3,6 +3,7 @@
 #include <math.h>
 
  /* Solución para el problema #146 de Project Euler
+  * "¿Cuál es la suma de todos los números enteros n menores de 150 millones?"
   * https://projecteuler.net/problem=146             */
 
 #define N 1000000
@@ -12,13 +13,12 @@ int primePattern(int n);
 
 int main()
 {
-    int n;
-    long long int respuesta = 0;
-    //printf("%d\n", primePattern(10));
+    long long int n, respuesta = 0;
     for (n = 1; n <= N; n++){
         if (primePattern(n) == 1){
             respuesta += n;
-            printf("%d)\n", n);
+            printf("%d)", n);
+            getchar();
         }
     }
     printf("La respuesta es %d\n", n);
