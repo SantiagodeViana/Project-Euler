@@ -3,6 +3,7 @@
 #include <math.h>
 
  /* Solución para el problema #142 de Project Euler
+  * "Encuentre el menor valor de + y + z con números enteros > y > z > 0 tal que x + y, x − y, x + z, x − z, y + z, y − z sean todos cuadrados perfectos."
   * https://projecteuler.net/problem=142            */
 
 int main()
