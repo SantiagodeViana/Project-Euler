@@ -4,12 +4,17 @@
 
  /* Solución para el problema #146 de Project Euler
   * "¿Cuál es la suma de todos los números enteros n menores de 150 millones?"
-  * https://projecteuler.net/problem=146             */
+  * https://projecteuler.net/problem=146             
+  * 
+  * 315410) Respuesta: 315420
+  * 927070) Respuesta: 1242490
+  * 2525870) Respuesta: 3768360
+  * 6760000) Respuesta: 3768360   */
 
 #define N 150000000
 
 int isPrime(long long int n);
-int primePattern(int n);
+int primePattern(long long int n);
 
 int main()
 {
@@ -19,9 +24,8 @@ int main()
             respuesta += n;
             printf("%lld) Respuesta: %lld\n", n, respuesta);
         }
-        //printf("%lld) Respuesta: %lld", n, respuesta);
+        if (n % 10000 == 0) printf("%lld) Respuesta: %lld\n", n, respuesta);
         //getchar();
-        //if (n % 10000 == 0)
     }
     printf("La respuesta es %lld\n", respuesta);
     return 0;
