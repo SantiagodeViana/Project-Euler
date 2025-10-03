@@ -12,37 +12,40 @@ int main()
     double raiz; //Evalúa si las expresiones son cuadrados perfecto o no
     long long int respuesta = 0;
     while (respuesta == 0){
-        while (x > y){
+        while (x > y && respuesta == 0){
             raiz = sqrt(x + y);
             if (raiz == (int)raiz){
-                raiz = x - y; //Sólo se evalúa 'z' si x y 'y' son válidos
-                while(raiz == (int)raiz && y > z && respuesta == 0){ //Sale del bucle al descartar casos o conseguir respuesta
-                    switch (i) {
-                        case 1:
-                            raiz = sqrt(x + z);
-                            break;
-                        case 2:
-                            raiz = sqrt(x - z);
-                            break;
-                        case 3:
-                            raiz = sqrt(y + z);
-                            break;
-                        case 4:
-                            raiz =  sqrt(y - z);
-                            break;
-                        case 5: //Respuesta conseguida
-                            printf("x:%d y:%d z%d\n", x, y, z);
-                            respuesta =  x + y + z;
-                            break;
-                        default:
-                            z++;
-                            break;
+                while(y > z && respuesta == 0){
+                    raiz = x - y; //Sólo se evalúa 'z' si x y 'y' son válidos
+                    while(raiz == (int)raiz && respuesta == 0){ //Sale del bucle al descartar casos o conseguir respuesta
+                        switch (i) { //La raíz de actualiza en cada caso y se evalúa si es un entero (cuadrado perfecto)
+                            case 1:
+                                raiz = sqrt(x + z);
+                                break;
+                            case 2:
+                                raiz = sqrt(x - z);
+                                break;
+                            case 3:
+                                raiz = sqrt(y + z);
+                                break;
+                            case 4:
+                                raiz =  sqrt(y - z);
+                                break;
+                            case 5: //Respuesta conseguida
+                                printf("x:%d y:%d z%d\n", x, y, z);
+                                respuesta =  x + y + z;
+                                break;
+                            default:
+                                z++;
+                                break;
+                        }
+                        i++;
                     }
-                    i++;
+                    i = 1;
+                    z++;
                 }
-                i = 1;
-                z = 1;
             }
+            z = 1;
             y++;
         }
         printf("x:%d y:%d z%d\n", x, y, z);
