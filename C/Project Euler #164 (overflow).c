@@ -19,11 +19,11 @@ int main()
 
 int threeDigitSum(long long int n){ //Comprueba que ningunos tres dígitos consecutivos superen 10
     int sum, aux = 0, aux2 = n % 10;
-    while (n > 0 && sum < 9){
+    while (n > 0 && sum <= 9){
         sum = (n%10) + aux + aux2;
         aux2 = aux;
         aux = n % 10;
     }
-    if (sum >= 9) return 1;
+    if (sum <= 9) return 1;
     else return 0;
 }
