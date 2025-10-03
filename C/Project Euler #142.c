@@ -30,9 +30,9 @@ int main()
                                 case 3:
                                     raiz =  sqrt(y - z);
                                     break;
-                                case 4: //Respuesta conseguida
-                                    printf("x:%d y:%d z%d\n", x, y, z);
+                                case 4:
                                     respuesta =  x + y + z;
+                                    printf("Respuesta encontrada: x:%d y:%d z%d (%lld)\n", x, y, z, respuesta);
                                     break;
                             }
                             i++;
