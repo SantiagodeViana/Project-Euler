@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <math.h>
 
+/* Solución para el problema #111 de Project Euler
+ * "Encuentra la suma de todos los S(10, d)."
+ * https://projecteuler.net/problem=111            */
+
 int isPrime(long long int n);
 long long int PE111(int n, int d);
 int digRep(long long int n, int d);
