@@ -11,11 +11,7 @@ int valorRomano(char romanos[3][50], int indice);
 int savedChar (char romanos[3][50]);
 
 int main()
-{
-     /* Solución para el problema #89 de Project Euler (Roman numerals)
-     * "Halla el número de caracteres que se ahorran escribiendo cada uno de ellos en su forma mínima."
-     * https://projecteuler.net/problem=89            */
-  
+{  
     FILE *listaRomanos; 
     int i = 0, respuesta = 0;
     //char temp [15]; //Array temporal para recibir y llenar
