@@ -3,7 +3,8 @@
 #include <math.h>
 
 /* Solución para el problema #95 de Project Euler
- * https://projecteuler.net/problem=95    */
+ * "Encuentra el miembro más pequeño de la 'cadena amigable' más larga cuyo ningún elemento exceda un millón."
+ * https://projecteuler.net/problem=95             */
 
 int divSum(int n);
 int amicableChain(int n);
