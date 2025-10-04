@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 /* Solución para el problema #120 de Project Euler
+ * "Para 3 ≤ a ≤ 1000, encuentra ∑ r_max."
  * https://projecteuler.net/problem=120    */
 
 int main()
