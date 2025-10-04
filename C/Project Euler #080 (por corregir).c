@@ -3,6 +3,7 @@
 #include <math.h>
 
 /* Solución para el problema #80 de Project Euler
+ * "Para los primeros cien números naturales, encuentra el total de las sumas de dígitos de los primeros cien decimales de todas las raíces cuadradas irracionales."
  * https://projecteuler.net/problem=80            */
 
 int main()
