@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Solución para el problema #81 de Project Euler
+ * "Encuentra la suma mínima de un camino desde la esquina superior izquierda hasta la esquina inferior derecha, moviéndote solo hacia la derecha y hacia abajo,
+ * en el archivo matrix.txt, un archivo de texto de 31 KB que contiene una matriz de 80 por 80."
+ * https://projecteuler.net/problem=81            */
+
 int main()
 {
     int matriz[80][80] = {
