@@ -3,7 +3,9 @@
 #include <math.h>
 
 /* Solución para el problema #94 de Project Euler
- * https://projecteuler.net/problem=94    */
+ * "Halla la suma de los perímetros de todos los triángulos *casi* equiláteros con longitudes de lados y área enteras y cuyos perímetros no superen 
+ * los mil millones (1 000 000 000)."
+ * https://projecteuler.net/problem=94      */
 
 int main()
 {
