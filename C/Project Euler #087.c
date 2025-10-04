@@ -4,6 +4,10 @@
 
 int isPrime(int n);
 
+/* Solución para el problema #87 de Project Euler
+ * "¿Cuántos números menores de cincuenta millones pueden expresarse como la suma de un cuadrado primo, un cubo primo y una cuarta potencia prima?"
+ * https://projecteuler.net/problem=87            */
+
 int main()
 {
     int x, y, z, n, respuesta = 0;
