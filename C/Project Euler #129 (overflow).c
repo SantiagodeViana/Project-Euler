@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
  /* Solución para problema #129 de Project Euler
+  * "Encuentra el valor más pequeño de n para el cual A(n) excede por primera vez un millón."
   * https://projecteuler.net/problem=129 */
 
 int euclides (int n, int m);
