@@ -3,6 +3,7 @@
 #include <math.h>
 
 /* Solución para el problema #123 de Project Euler
+ * "Encuentra el valor más pequeño de n para el cual el resto exceda por primera vez 10¹⁰."
  * https://projecteuler.net/problem=123    */
 
 int isPrime(long long int n);
