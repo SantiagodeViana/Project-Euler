@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 /* Solución para el problema #100 de Project Euler
+ * "Al encontrar la primera disposición que contenga más de 10¹² = 1 000 000 000 000 discos en total, determina el número de discos azules que contendría la caja."
  * https://projecteuler.net/problem=100            */
 
 int main()
