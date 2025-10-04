@@ -11,9 +11,6 @@ int isBouncy (int n);
 
 int main()
 {
-    //printf("134468 increasing? %d\n", isIncreasing(134468));
-    //printf("66420 decreasing? %d\n", isDecreasing(66420));
-    //printf("155349 bouncy? %d\n", isBouncy(155349));
     int i;
     double bounces = 0, respuesta;
     for (i = 1; respuesta < 0.99; i++){
