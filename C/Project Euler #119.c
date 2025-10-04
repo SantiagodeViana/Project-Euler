@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 /* Solución para el problema #119 de Project Euler
+ * "Encuentra a30"
  * El programa arroja los diferentes términos y candidatos desordenados y repetidos. Deben ordenarse manualmente.
  * https://projecteuler.net/problem=119 */
 
