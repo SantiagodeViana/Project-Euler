@@ -4,6 +4,7 @@
 #define TILES 1000000
 
  /* Solución para el problema #173 de Project Euler
+  * "Usando hasta un millón de baldosas, ¿cuántas láminas cuadradas diferentes pueden formarse?"
   * https://projecteuler.net/problem=173       */
 
 int main()
