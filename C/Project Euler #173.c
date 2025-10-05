@@ -5,7 +5,8 @@
 
  /* Solución para el problema #173 de Project Euler
   * "Usando hasta un millón de baldosas, ¿cuántas láminas cuadradas diferentes pueden formarse?"
-  * https://projecteuler.net/problem=173       */
+  * https://projecteuler.net/problem=173       
+  * La condición límite del bucle no funciona, pero la respuesta conseguida es correcta */
 
 int main()
 {
@@ -15,7 +16,7 @@ int main()
         for (long long int b = 1; b <= (a-2); b++){ //a representa el perímetro y el "grueso" de las láminas
             if (((a%2 == 0 && b%2 == 0) || (a%2 != 0 && b%2 !=0)) && ((a+b)*(a-b) <= TILES)){ //Expresando a^2 - b^2 como (a+b)(a-b)
                 respuesta++; //a y b deben tener la misma paridad, y no deben exceder la cantidad de casillas.
-                if (a % 1000 == 0) printf ("a: %d  b: %d  Respuesta: %d\n", a, b, respuesta);
+                printf ("a: %d  b: %d  Respuesta: %d\n", a, b, respuesta);
             }
         }
     }
