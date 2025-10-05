@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
  /* Solución para el problema #135 de Project Euler
   * "¿Cuántos valores de n menores que un millón tienen exactamente diez soluciones distintas?"
@@ -7,23 +8,24 @@
 
 int main()
 {
-    int x, y, z, d = 1, soluciones = 0, respuesta = 0; //x es el mayor cuadrado, d la diferencia
-    for (int n = 1; n <= 100; n++){
-        x = n*2;
-        while (x > 2){ //3 es el valor mínimo antes de que z = 0 con la mínima diferencia
-            y = x - d;
-            z = x - 2*d;
-            if (((x*x) - (y*y) - (z*z)) > n) d++; //Se aumenta la diferencia en caso de que la expresión sea mayor
-            else if (((x*x) - (y*y) - (z*z)) <= n){
-                if (((x*x) - (y*y) - (z*z)) == n){
-                    soluciones++;
-                    printf("%d^2 - %d^2 - %d^2 = %d\n", x, y, z, n);
-                }
-                x--;
-                d = 1;
+    int x = 4, y = 3, z = 2, d = 1, soluciones = 0, respuesta = 0; //x es el mayor cuadrado, d la diferencia.
+    //long long int x2 = 16; //x2 denotará el cuadrado de x
+    //Al ser x, 'y' y z parte de una progresión aritmética, la diferencia es la misma
+    for (int n = 0; n <= 1000000; n++){
+        //Se escoge el doble de n como valor inicial para comprobar soluciones
+        for (x = n*2; x*x > n && soluciones <= 10; x--){ //Se dejan de buscar candidatos si existen más de 10 soluciones exactas
+            //x2 = x*x;
+            for (d = 1; x-2*d > 0; d++){ //3 es el valor mínimo antes de que z = 0 con la mínima diferencia. Las variables deben ser enteros positivos
+                y = x - d;
+                z = x - 2*d;
+                if ((x*x) - (y*y) - (z*z) == n) soluciones++;
             }
         }
-        if (soluciones >= 10) respuesta++;
+        if (soluciones == 10){
+            respuesta++;
+            printf("n: %d Respuesta: %d\n", n, respuesta);
+        }
+        //if (n % 100000 == 0) printf("n: %d Respuesta: %d\n", n, respuesta);
         soluciones = 0;
     }
     printf("La respuesta es: %d\n", respuesta);
