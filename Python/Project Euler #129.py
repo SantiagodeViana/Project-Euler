@@ -41,7 +41,7 @@ def repunitD(n): # Devuelve el valor A(n), el menor valor del largo k en R(k) # 
     return A
 
 def main():
-    i = 1
+    i = 999950
     respuesta = 0
     while respuesta < 1000000:
         if euclides(i, 10) == 1:  # i debe ser coprimo de 10 para poder ser un dividor
