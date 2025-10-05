@@ -1,3 +1,5 @@
 * Buscar y trabajar problemas de palíndromos
 * Convertir problemas con overflow
 * Limpiar funciones isPrime()
+* Actualizar carpeta de funciones
+* Subir .txt de problemas
