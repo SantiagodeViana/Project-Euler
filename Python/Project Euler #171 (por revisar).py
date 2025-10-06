@@ -1,6 +1,6 @@
 import math
 
-def squareSum(n):  # Devuelve suma del cuadrado de los dígitos de n
+def square_sum(n):  # Devuelve suma del cuadrado de los dígitos de n
     suma = 0
     while n > 0:
         suma += (n % 10) * (n % 10)
@@ -20,7 +20,7 @@ def main():
     # f(640000000) = 52 Respuesta: 7302829116635220
     # f(5063000000) = 70 Respuesta: 425636745228940165
     while i <= 100000000000000000000:
-        square = squareSum(i)
+        square = square_sum(i)
         if math.isqrt(square) ** 2 == square:  # Comprueba cuadrados perfectos: aquellos cuya raíz sean enteros
             respuesta += i
             #print(f"f({i}) = {square}")
