@@ -1,6 +1,6 @@
 # Función usada en Project Euler #271
 
-def modCubo(n):
+def mod_cubo(n):
     suma = 0
     for i in range(2, n, 1):  # Sola cuenta números impares
         aux = i
