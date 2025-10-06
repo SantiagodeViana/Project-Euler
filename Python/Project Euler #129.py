@@ -31,7 +31,7 @@ def euclides(n, m):
         return b
     return 1
 
-def repunitD(n): # Devuelve el valor A(n), el menor valor del largo k en R(k) # en el que un repunit es divisible por n
+def repunit_D(n): # Devuelve el valor A(n), el menor valor del largo k en R(k) # en el que un repunit es divisible por n
     A = 1
     r = 1
     while (n > r) or (r % n != 0): # Mientras n sea mayor que r o no sea divisible por el repunit
@@ -45,7 +45,7 @@ def main():
     respuesta = 0
     while respuesta < 1000000:
         if euclides(i, 10) == 1:  # i debe ser coprimo de 10 para poder ser un dividor
-            A = repunitD(i)
+            A = repunit_D(i)
             if A > respuesta:
                 respuesta = i
                 print(f"A({i}) = {A}")
