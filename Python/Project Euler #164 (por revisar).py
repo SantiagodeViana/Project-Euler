@@ -1,4 +1,4 @@
-def threeDigitSum(n: int) -> int:
+def three_digit_sum(n: int) -> int:
     if n < 100: #Descartando números de menos de 3 dígitos
         return 1
     else:
@@ -21,7 +21,7 @@ def threeDigitSum(n: int) -> int:
 def main():
     respuesta = 0
     for n in range(10_000_000_000_000_000_000, 100_000_000_000_000_000_000):
-        if threeDigitSum(n) == 1:
+        if three_digit_sum(n) == 1:
             respuesta += 1
         if (n % 1000000 == 0):
             print(f"n: {n}  Respuesta:{respuesta}")
