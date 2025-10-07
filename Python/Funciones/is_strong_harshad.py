@@ -1,6 +1,6 @@
 # Función usada en Project Euler #387
 
-def strong_harshad(n: int) -> int:
+def is_strong_harshad(n: int) -> int:
     suma = digit_sum(n)
     if n % suma != 0:
         return 0
