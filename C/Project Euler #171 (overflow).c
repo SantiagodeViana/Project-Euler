@@ -5,7 +5,7 @@
 long long int squareSum(long long int n);
 
  /* Solución del problema #171 de Project Euler
-  * "Encuentr1 los últimos nueve dígitos de la suma de todos los n, 0 < n < 10^20, tales que f(n) sea un cuadrado perfecto.
+  * "Encuentra los últimos nueve dígitos de la suma de todos los n, 0 < n < 10^20, tales que f(n) sea un cuadrado perfecto.
   * https://projecteuler.net/problem=171                   */
 
 int main()
