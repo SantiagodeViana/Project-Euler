@@ -1,11 +1,11 @@
 public class Main {
     public static void main(String[] args) {
         /* Solución para el problema #82 de Project Euler
-        * "Encuentre la suma mínima del camino de la columna izquierda a la columna derecha 
-        *  en una matriz de 80 por 80."
-        *  https://projecteuler.net/problem=82          */
+        * "Encuentre la suma mínima del camino de la columna izquierda a la columna derecha en una matriz de 80 por 80."
+        *  https://projecteuler.net/problem=82
+        *  El programa actual tarda mucho en obtener la respuesta  */
 
-        int [][] matriz = {{131, 673, 234, 103, 18}, {201, 96, 342, 965, 150}, {630, 803, 746, 422, 111}, {537, 699, 497, 121, 956}, {805, 732, 524, 37, 331}};
+        int [][] matriz = {{131, 673, 234, 103, 18}, {201, 96, 342, 965, 150}, {630, 803, 746, 422, 111}, {537, 699, 497, 121, 956}, {805, 732, 524, 37, 331}}; //Caso de prueba
         int N = matriz.length;
         boolean[][] visitados = new boolean [N][N];
         for (int i = 0; i < N; i++) { //Inicializando matriz de visitados
@@ -105,3 +105,4 @@ int matriz[][] =
 
 
  */
+
