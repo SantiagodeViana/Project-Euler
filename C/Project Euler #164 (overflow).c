@@ -3,6 +3,11 @@
 
 int threeDigitSum(long long int n);
 
+ /* Solución para el problema #164 de Project Euler
+  * "¿Cuántos números de 20 dígitos n (sin ceros iniciales) existen tal que ningún grupo 
+  * de tres dígitos consecutivos de n tenga una suma mayor que 9?"
+  * https://projecteuler.net/problem=164            */
+
 int main()
 {
     int respuesta = 0;
