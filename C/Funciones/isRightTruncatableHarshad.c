@@ -1,6 +1,6 @@
 //Función usada en Project Euler #387
 
-int rightTruncatableHarshad(long long int n){ //Desde la derecha
+int isRightTruncatableHarshad(long long int n){ //Desde la derecha
     int i = 1, j;
     if (n < 10) return 0;
     else{
