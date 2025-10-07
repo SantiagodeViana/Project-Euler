@@ -2,11 +2,11 @@ import math
 
 # Solución para el problema #387 de Project Euler
 # https://projecteuler.net/problem=387
-# Código convertido del programa equivalente en C con ChayGPT
+# Código convertido del programa equivalente en C con ChatGPT
 
 # "Respuesta:130459097 i:80402071"
 
-def isPrime(n: int) -> int:
+def is_prime(n: int) -> int:
     if n == 1:
         return 1  # (could be 0, depending on your intended definition)
     elif n < 4:
@@ -36,49 +36,49 @@ def digitos(n: int) -> int:
         respuesta += 1
     return respuesta
 
-def digitSum(n: int) -> int:
+def digit_sum(n: int) -> int:
     suma = 0
     while n > 0:
         suma += n % 10
         n //= 10
     return suma
 
-def isHarshad(n: int) -> int:
-    if n % digitSum(n) == 0:
+def is_harshad(n: int) -> int:
+    if n % digit_sum(n) == 0:
         return 1
     else:
         return 0
 
-def rightTruncatableHarshad(n: int) -> int:
+def right_truncatable_harshad(n: int) -> int:
     i = 1
     if n < 10:
         return 0
     else:
         while i < n:
             j = n // i
-            if isHarshad(j) == 0:
+            if is_harshad(j) == 0:
                 return 0
             i *= 10
     return 1
 
-def strongHarshad(n: int) -> int:
-    suma = digitSum(n)
+def strong_harshad(n: int) -> int:
+    suma = digit_sum(n)
     if n % suma != 0:
         return 0
     elif n < 10:
         return 0
-    elif isPrime(n // suma) == 1:
+    elif is_prime(n // suma) == 1:
         return 1
     return 0
 
-def rightTruncatableStrongHarshadPrime(n: int) -> int:
-    if isPrime(n) != 1:
+def right_truncatable_strong_harshad_prime(n: int) -> int:
+    if is_prime(n) != 1:
         return 0
     elif n < 10:
         return 0
     else:
         n //= 10
-        if strongHarshad(n) == 1 and rightTruncatableHarshad(n) == 1:
+        if strong_harshad(n) == 1 and right_truncatable_harshad(n) == 1:
             return 1
     return 0
 
@@ -86,6 +86,6 @@ def rightTruncatableStrongHarshadPrime(n: int) -> int:
 if __name__ == "__main__":
     respuesta = 0
     for i in range(1, 100000000000001):
-        if rightTruncatableStrongHarshadPrime(i) == 1:
+        if right_truncatable_strong_harshad_prime(i) == 1:
             respuesta += i
             print(f"Respuesta:{respuesta} i:{i}")
