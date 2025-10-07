@@ -17,6 +17,11 @@ def three_digit_sum(n: int) -> int:
     else:
         return 0
 
+# Solución para el problema #164 de Project Euler
+# "¿Cuántos números de 20 dígitos n (sin ceros iniciales) existen tal que ningún grupo 
+# de tres dígitos consecutivos de n tenga una suma mayor que 9?"
+# https://projecteuler.net/problem=164            
+# El programa actual tarda demasiado en ofrecer la respuesta
 
 def main():
     respuesta = 0
