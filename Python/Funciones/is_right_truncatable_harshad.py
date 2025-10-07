@@ -1,6 +1,6 @@
 # Función usada en Project Euler #387
 
-def right_truncatable_harshad(n: int) -> int:
+def is_right_truncatable_harshad(n: int) -> int:
     i = 1
     if n < 10:
         return 0
