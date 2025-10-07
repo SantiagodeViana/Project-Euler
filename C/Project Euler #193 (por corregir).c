@@ -5,14 +5,17 @@
 int isPrime(int n);
 int isSquarefree(long long int n);
 
+/* Solución para el problema #193 de Project Euler
+ * "¿Cuántos números "libres de cuadrados" hay por debajo de 2^50?"
+ * https://projecteuler.net/problem=193                 
+ * El programa actual tarda demasiado en buscar la respuesta           */
+
 int main()
 {
     int respuesta = 0;
-    for (long long int = 1; i <= 50; i++){ //1125899906842624
-        if (isSquarefree(i) == 1){
-            respuesta++;
-            printf("n: %d", i);
-        }
+    for (long long int i = 1; i <= 1125899906842624; i++){ //2^50
+        if (isSquarefree(i) == 1) respuesta++;
+        if (i % 1000000 == 0) printf("n: %d Respuesta: %d\n", i, respuesta);
     }
     printf("La respuesta es %d\n", respuesta);
     return 0;
@@ -43,4 +46,5 @@ int isSquarefree(long long int n){ //Comprueba si n es "squarefree": si es divis
         }
         i++;
     }
+    return squarefree;
 }
