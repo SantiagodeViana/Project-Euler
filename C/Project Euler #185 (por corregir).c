@@ -18,8 +18,7 @@ int main()
     {1841236454324589, 3}, {2659862637316867, 2}};
     for (int i = 0; i < N; i++){
         printf("%d) %lld (%d correctos):\n", i+1, guesses[i][0], guesses[i][1]);
-        printf("%d) %lld (%d correctos):\n", 3, guesses[2][0], guesses[2][1]);
-        numberMind(guesses[i][0], 5840000650000207, 2321386104303845, i);
+        numberMind(guesses[i][0], 5840059074000200, 2321386104303845, i); //Candidato: 5840059074000200
     }
     printf("La respuesta es \n");
     return 0;
@@ -29,9 +28,9 @@ void numberMind(long long int n, long long int check, long long int wrong, int n
     if (num < 9) printf("   ");
     else printf("    "); //El parámetro num sólo se usa para facilitar la lectura del
     long long int pow = 1000000000000000;
-    while (n > 0){
-        if (n/pow == wrong/pow) printf("X"); //Evaluando de izquierda a derecha
-        else if (n/pow == check/pow) printf("O"); //Evaluando de izquierda a derecha
+    while (n > 0){ //Evaluando de izquierda a derecha
+        if (n/pow == wrong/pow) printf("X"); //Número equivocado
+        else if (n/pow == check/pow && n/pow != 0) printf("O"); //Coincidencia
         else printf("_");
         n %= pow;
         check %= pow;
