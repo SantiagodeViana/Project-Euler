@@ -3,7 +3,7 @@
 
 #define N 22 //N es la cantidad de guesses
 
-void numberMind(long long int n, long long int m, int num);
+void numberMind(long long int n, long long int check, long long int wrong, int num);
 
 /* Solución para el problema #185 de Project Euler
  * "Encuentra la secuencia secreta única de 16 dígitos."
@@ -19,27 +19,23 @@ int main()
     for (int i = 0; i < N; i++){
         printf("%d) %lld (%d correctos):\n", i+1, guesses[i][0], guesses[i][1]);
         printf("%d) %lld (%d correctos):\n", 3, guesses[2][0], guesses[2][1]);
-        numberMind(guesses[i][0], guesses[2][0], 2);
-        printf("%d) %lld (%d correctos):\n", 11, guesses[10][0], guesses[10][1]);
-        numberMind(guesses[i][0], guesses[10][0], 10);
-        printf("%d) %lld (%d correctos):\n", 18, guesses[17][0], guesses[17][1]);
-        numberMind(guesses[i][0], guesses[17][0], 17);
-        printf("%d) %lld (%d correctos):\n", 19, guesses[18][0], guesses[18][1]);
-        numberMind(guesses[i][0], guesses[18][0], 18);
+        numberMind(guesses[i][0], 5840000650000207, 2321386104303845, i);
     }
     printf("La respuesta es \n");
     return 0;
 }
 
-void numberMind(long long int n, long long int m, int num){ //Ayuda a visualizar las coincidencias entre dos números, escribiendo sus posiciones
+void numberMind(long long int n, long long int check, long long int wrong, int num){ //Ayuda a visualizar las coincidencias entre dos números, escribiendo sus posiciones
     if (num < 9) printf("   ");
     else printf("    "); //El parámetro num sólo se usa para facilitar la lectura del
     long long int pow = 1000000000000000;
-    while (n > 0 && m > 0){
-        if (n/pow == m/pow) printf("X"); //Evaluando de izquierda a derecha
+    while (n > 0){
+        if (n/pow == wrong/pow) printf("X"); //Evaluando de izquierda a derecha
+        else if (n/pow == check/pow) printf("O"); //Evaluando de izquierda a derecha
         else printf("_");
         n %= pow;
-        m %= pow;
+        check %= pow;
+        wrong %= pow;
         pow /= 10;
     }
     getchar();
