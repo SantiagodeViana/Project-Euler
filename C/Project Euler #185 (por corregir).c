@@ -17,13 +17,8 @@ int main()
     {2326509471271448, 2}, {5251583379644322, 2}, {1748270476758276, 3}, {4895722652190306, 1}, {3041631117224635, 3},
     {1841236454324589, 3}, {2659862637316867, 2}};
     for (int i = 0; i < N; i++){
-        //printf("%d) %lld (%d correcto(s)):\n", i+1, guesses[i][0], guesses[i][1]);
-        //for (int j = i; j < N; j++){
-            //if (guesses[i][0] != 0 && guesses[j][0]){
-                printf("%d) %lld (%d correcto(s)):\n", i+1, guesses[i][0], guesses[i][1]);
-                numberMind(guesses[i][0], 0, 9640561780657566, 2321386104303845, i+1); //Candidato: 5840059074000200
-            //}
-        //}
+        printf("%d) %lld (%d correcto(s)):\n", i+1, guesses[i][0], guesses[i][1]);
+        numberMind(guesses[i][0], 0, 9592605845884562, 2321386104303845, i+1); 
     }
     printf("La respuesta es \n");
     return 0;
@@ -35,9 +30,9 @@ void numberMind(long long int n, long long int m, long long int check, long long
     long long int pow = 1000000000000000;
     while (n > 0){ //Evaluando de izquierda a derecha
         //if (n/pow == wrong/pow) printf("X"); //Número equivocado
-        if (n/pow == check/pow) printf("_"); //Coincidencia
+        if (n/pow == check/pow) printf("O"); //Coincidencia
         //else if (n/pow == m/pow) printf("%d", n/pow); //Coincidencia
-        else printf("%d", check/pow);
+        else printf("_");
         n %= pow;
         m %= pow;
         check %= pow;
