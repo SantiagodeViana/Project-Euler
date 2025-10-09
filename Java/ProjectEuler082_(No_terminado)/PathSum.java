@@ -23,8 +23,8 @@ public class PathSum {
                 if (c == 0 && i > 0 && !visitados[i - 1][nivel]) i--;
                 else if (c == 1 && nivel < matriz.length - 1 && !visitados[i][nivel + 1]) nivel++;
                 else if (c == 2 && i < matriz.length - 1 && !visitados[i + 1][nivel]) i++;
-                //Optimizando: aceptando solo pasos con posibles soluciones menores
-                if (!visitados[i][nivel] && (valorAcumulado < sol.getSolucion()) && (valorAcumulado < 1159)){ //((valorAcumulado < sol.getSolucion()) && (valorAcumulado < 351202))
+                //Optimizando con backtracking: aceptando solo pasos con posibles soluciones menores
+                if (!visitados[i][nivel] && (valorAcumulado < sol.getSolucion())){ //((valorAcumulado < sol.getSolucion()) && (valorAcumulado < 351202))
                     visitados[i][nivel] = true;
                     valorAcumulado += matriz[i][nivel];
                     minValorAux(matriz, visitados, nivel, i, sol, valorAcumulado);
@@ -38,3 +38,4 @@ public class PathSum {
         }
     }
 }
+
