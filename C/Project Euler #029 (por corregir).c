@@ -7,29 +7,7 @@ int isPrime(int n);
 /*    Solución para el problema #29 de Project Euler
  *    "¿Cuántos términos distintos hay en la secuencia generada por a^b para 2 ≤ a ≤ 100 y 2 ≤ b ≤ 100?"
  *    https://projecteuler.net/problem=29         
- 
- *    Potencias de 2: 4*, 8, 16*, 32, 64*
- *    Potencias de 3: 9*, 27, 81*
- *    Potencias de 4: 16*, 64*
- *    Potencias de 5: 25*
- *    Potencias de 6: 36*
- *    Potencias de 7: 49*
- *    Potencias de 8: 64*
- *    Potencias de 9: 81*
- *    Potencias de 10: 100*
- */
-
-/* PATRONES ENCONTRADOS:
- *    Después de un análisis en una tabla de excel, estos han sido los patrones encontrados:
- * 1) Imprimir todas las potencias del 1 al 10
- * 2) Deberán excluirse las potencias de los cuadrados de la mitad inferior del límite
- *    Cuadrados: 4*, 9*, 16, 25, 36, 49, 64, 81, 100
- * 3) Deberán excluirse las potencias de las potencias de la mitad inferior del límite de exponente par
- *    Potencias a considerar: 8, 27, 32
- *
- *    Respuesta obtenida errada: 9138
- *    Revisar código
- */
+ *    Respuesta obtenida errada: 9138, revisar código     */
 
 int main(){
     int i, j, respuesta = 0, N = 100; //Contadores 'i' y 'j' como 'a' y 'b' respectivamente, respuesta y límite N
