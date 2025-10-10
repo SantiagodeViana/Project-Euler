@@ -17,12 +17,19 @@ int main()
     {2326509471271448, 2}, {5251583379644322, 2}, {1748270476758276, 3}, {4895722652190306, 1}, {3041631117224635, 3},
     {1841236454324589, 3}, {2659862637316867, 2}};
     int checks = 0, valido = 1, j;
-    long long int respuesta = 1000000000000000;
+    long long int respuesta = 9592605845884562;
     while (respuesta <= 9999999999999999 && checks < N){ //Bucle para posibles respuestas
-        j = 1;
+        j = 0;
         while (j < N && valido == 1){ //Bucles para comparar con
-            if (numberMind(respuesta, guesses[j][0], guesses[j][1])) checks ++;
-            else valido = 0;
+            if (numberMind(respuesta, guesses[j][0], guesses[j][1]) == 1 && j != 14){ //Se descarta guess #15, no hay ninguna coincidencia
+                checks++;
+                printf("%lld - Exito: %lld", respuesta, guesses[j][0]);
+            }
+            else{
+                valido = 0;
+                printf("%lld - Fallo: %lld", respuesta, guesses[j][0]);
+            }
+            getchar();
             j++;
         }
         if (respuesta % 10000000 == 0) printf("Contreasena: %lld (Checks: %d)\n", respuesta, checks);
@@ -53,5 +60,6 @@ int numberMind(long long int n, long long int m, int limit){ //Comprueba la vali
             pow /= 10;
         }
     }
+    if (limit != check) valid = 0;
     return valid;
 }
