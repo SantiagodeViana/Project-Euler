@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define N 6 //N es la cantidad de guesses
+#define N 6//N es la cantidad de guesses
 
 int numberMind(long long int n, long long int m, int limit);
 
@@ -17,8 +17,10 @@ int main()
     while (respuesta <= 99999 && checks < N){ //Bucle para posibles respuestas
         j = 0;
         while (j < N && valido == 1){ //Bucles para comparar con
-            if (numberMind(respuesta, guesses[j][0], guesses[j][1]) == 1 && j != 1) checks++; //Se descarta guess #15, no hay ninguna coincidencia
-            else valido = 0;
+            if (numberMind(respuesta, guesses[1][0], guesses[1][1]) == 1){ //Se descarta guess #15, no hay ninguna coincidencia
+                if (numberMind(respuesta, guesses[j][0], guesses[j][1]) == 1) checks++;
+                else valido = 0;
+            }
             j++;
         }
         printf("Contresena: %lld (Checks: %d)\n", respuesta, checks);
@@ -34,19 +36,11 @@ int main()
 
 int numberMind(long long int n, long long int m, int limit){ //Comprueba la validez de n como contraseña, comparando con otras
     int valid = 1, check = 0;
-    long long int aux = n;
-    long long int pow = 10000, wrong = 70794;
-    while (aux > 0 && valid == 1){ //Guess #15 no tiene ningún acierto. Si hay alguna coincidencia, ya se descarta la opción
-        if (aux%10 == m%10) valid = 0;
-        aux /= 10;
-        wrong /= 10;
-    }
     if (valid == 1){
         while (n > 0 && check <= limit){ //Las coincidencias deben ser exactas para ser una contraseña válida
             if (n%10 == m%10) check++;
             n /= 10;
             m /= 10;
-            pow /= 10;
         }
     }
     if (limit != check) valid = 0;
