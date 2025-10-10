@@ -3,7 +3,7 @@
 
 #define N 22 //N es la cantidad de guesses
 
-void numberMind(long long int n, long long int m, long long int check, long long int wrong, int num);
+int numberMind(long long int n, long long int m, int limit);
 
 /* Solución para el problema #185 de Project Euler
  * "Encuentra la secuencia secreta única de 16 dígitos."
@@ -16,28 +16,42 @@ int main()
     {8690095851526254, 3}, {6375711915077050, 1}, {6913859173121360, 1}, {6442889055042768, 2}, {2321386104303845, 0},
     {2326509471271448, 2}, {5251583379644322, 2}, {1748270476758276, 3}, {4895722652190306, 1}, {3041631117224635, 3},
     {1841236454324589, 3}, {2659862637316867, 2}};
-    for (int i = 0; i < N; i++){
-        printf("%d) %lld (%d correcto(s)):\n", i+1, guesses[i][0], guesses[i][1]);
-        numberMind(guesses[i][0], 0, 9592605845884562, 2321386104303845, i+1); 
+    int checks = 0, valido = 1, j;
+    long long int respuesta = 1000000000000000;
+    while (respuesta <= 9999999999999999 && checks < N){ //Bucle para posibles respuestas
+        j = 1;
+        while (j < N && valido == 1){ //Bucles para comparar con
+            if (numberMind(respuesta, guesses[j][0], guesses[j][1])) checks ++;
+            else valido = 0;
+            j++;
+        }
+        if (respuesta % 10000000 == 0) printf("Contreasena: %lld (Checks: %d)\n", respuesta, checks);
+        if (checks < N){
+            valido = 1;
+            respuesta++;
+        }
+        checks = 0; //Reiniciando contador de coincidencias
     }
-    printf("La respuesta es \n");
+    printf("La respuesta es %lld\n", respuesta);
     return 0;
 }
 
-void numberMind(long long int n, long long int m, long long int check, long long int wrong, int num){ //Ayuda a visualizar las coincidencias entre dos números, escribiendo sus posiciones
-    if (num < 10) printf("   ");
-    else printf("    "); //El parámetro num sólo se usa para facilitar la lectura del
-    long long int pow = 1000000000000000;
-    while (n > 0){ //Evaluando de izquierda a derecha
-        //if (n/pow == wrong/pow) printf("X"); //Número equivocado
-        if (n/pow == check/pow) printf("O"); //Coincidencia
-        //else if (n/pow == m/pow) printf("%d", n/pow); //Coincidencia
-        else printf("_");
-        n %= pow;
-        m %= pow;
-        check %= pow;
-        wrong %= pow;
-        pow /= 10;
+int numberMind(long long int n, long long int m, int limit){ //Comprueba la validez de n como contraseña, comparando con otras
+    int valid = 1, check = 0;
+    long long int aux = n;
+    long long int pow = 1000000000000000, wrong = 2321386104303845;
+    while (aux > 0 && valid == 1){ //Guess #15 no tiene ningún acierto. Si hay alguna coincidencia, ya se descarta la opción
+        if (aux%10 == m%10) valid = 0;
+        aux /= 10;
+        wrong /= 10;
     }
-    getchar();
+    if (valid == 1){
+        while (n > 0 && check <= limit){ //Las coincidencias deben ser exactas para ser una contraseña válida
+            if (n%10 == m%10) check++;
+            n /= 10;
+            m /= 10;
+            pow /= 10;
+        }
+    }
+    return valid;
 }
