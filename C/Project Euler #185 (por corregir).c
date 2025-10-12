@@ -1,29 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define N 6//N es la cantidad de guesses
+#define N 22//N es la cantidad de guesses
 
 int numberMind(long long int n, long long int m, int limit);
 
 /* Solución para el problema #185 de Project Euler
  * "Encuentra la secuencia secreta única de 16 dígitos."
- * https://projecteuler.net/problem=185                 */
+ * https://projecteuler.net/problem=185                 
+ * El programa actual tarda mucho en conseguir la respuesta */
 
 int main()
 {
-    long long int guesses[N][2] = {{90342, 2}, {70794, 0}, {39458, 2}, {34109, 1}, {51545, 2}, {12531, 1}};
+    long long int guesses[N][2] = {{5616185650518293, 2}, {3847439647293047, 1}, {5855462940810587, 3}, {9742855507068353, 3}, {4296849643607543, 3},
+    {3174248439465858, 1}, {4513559094146117, 2}, {7890971548908067, 3}, {8157356344118483, 1}, {2615250744386899, 2},
+    {8690095851526254, 3}, {6375711915077050, 1}, {6913859173121360, 1}, {6442889055042768, 2}, {2321386104303845, 0},
+    {2326509471271448, 2}, {5251583379644322, 2}, {1748270476758276, 3}, {4895722652190306, 1}, {3041631117224635, 3},
+    {1841236454324589, 3}, {2659862637316867, 2}};
     int checks = 0, valido = 1, j;
-    long long int respuesta = 10000;
-    while (respuesta <= 99999 && checks < N){ //Bucle para posibles respuestas
+    long long int respuesta = 9592605845884562;
+    while (respuesta <= 9999999999999999 && checks < N){ //Bucle para posibles respuestas
         j = 0;
         while (j < N && valido == 1){ //Bucles para comparar con
-            if (numberMind(respuesta, guesses[1][0], guesses[1][1]) == 1){ //Se descarta guess #15, no hay ninguna coincidencia
+            if (numberMind(respuesta, guesses[14][0], guesses[1][1]) == 1){ //Se descarta guess #15, no hay ninguna coincidencia
                 if (numberMind(respuesta, guesses[j][0], guesses[j][1]) == 1) checks++;
                 else valido = 0;
             }
             j++;
         }
-        printf("Contresena: %lld (Checks: %d)\n", respuesta, checks);
+        if (respuesta % 10000000 == 0) printf("Contresena: %lld (Checks: %d)\n", respuesta, checks);
         if (checks < N){
             checks = 0; //Reiniciando contador de coincidencias
             valido = 1;
