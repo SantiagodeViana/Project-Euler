@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 /* Solución para el problema #124 de Project Euler
+ * "Sea E(k) el k-ésimo elemento en la columna n ordenada; Si rad(n) está ordenado para 1 ≤ n ≤ 100000, encuentra E(10000)."
  * https://projecteuler.net/problem=124    */
 
 int isPrime(int n);
