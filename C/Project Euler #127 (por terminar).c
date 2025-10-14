@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
  /* Solución al problema #127 de Project Euler
+  * "Encuentra Σc para c < 120000."
   * https://projecteuler.net/problem=127 */
 
 int isPrime(int n);
-int radial(int n);  
+int radical(int n);  
 
 int main()
 {
@@ -30,7 +31,7 @@ int isPrime(int n){ //Función para determinar si un numero es primo, basada en 
         return 1;
     }
 }
-int radial(int n){
+int radical(int n){
     int d = n, producto = 1;
     while (n > 0){
         if (isPrime(d) == 1){ //Sólo se consideran divisores primos
