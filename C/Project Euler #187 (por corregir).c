@@ -5,9 +5,9 @@
 int isPrime(int n);
 int isSemiprime(int n);
 
-/* Solución para el problema #185 de Project Euler
+/* Solución para el problema #187 de Project Euler
  * "¿Cuántos números enteros compuestos, n < 10^8, tienen exactamente dos factores primos, no necesariamente distintos?"
- * https://projecteuler.net/problem=185                */
+ * https://projecteuler.net/problem=187                */
 
 int main()
 {
