@@ -3,6 +3,8 @@
 #include <math.h>
 
 /* Solución para el problema #125 de Project Euler
+ * "Encuentra la suma de todos los números menores que 10^8 que sean palíndromos y puedan escribirse
+    como la suma de cuadrados consecutivos."
  * https://projecteuler.net/problem=125    */
 
 int isPalindromic(long long int n);
