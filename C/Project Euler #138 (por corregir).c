@@ -3,7 +3,8 @@
 #include <math.h>
 
  /* Solución al problema #138 de Project Euler
-  * https://projecteuler.net/problem=138    */
+  * "Encuentra ΣL para los doce triángulos isósceles más pequeños para los que h = b±1 y b, L son números enteros positivos."
+  * https://projecteuler.net/problem=138        */
 
 int main()
 {
