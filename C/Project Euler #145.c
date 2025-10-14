@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 /* Solución al problema #145 de Project Euler
+ * "¿Cuántos números reversibles hay por debajo de mil millones (10^9)?"
  * https://projecteuler.net/problem=145       */
 
 int revert(int n);
