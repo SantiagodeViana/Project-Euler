@@ -3,6 +3,10 @@
 
 int divCount(int n);
 
+ /* Solución del problema #179 de Project Euler
+  * "Encuentra el número de enteros 1 < n < 10^7, para los que n y n + 1 tienen el mismo número de divisores positivos."
+  * https://projecteuler.net/problem=179                   */
+
 int main()
 {
     int respuesta = 0, count = divCount(2), count2 = divCount(1);
