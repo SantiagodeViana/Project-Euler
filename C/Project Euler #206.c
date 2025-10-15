@@ -4,6 +4,7 @@
 #define N 1929394959697989990 //1929394959697989990 es el mayor número posible
 
 /* Solución para el problema #206 de Project Euler
+ * "Encuentra el único número entero positivo cuyo cuadrado tenga la forma 1_2_3_4_5_6_7_8_9_0, donde cada «_» es un solo dígito.
  * https://projecteuler.net/problem=206                     */
 
 int PE206(long long int n);
