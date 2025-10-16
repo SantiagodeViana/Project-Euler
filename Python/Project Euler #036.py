@@ -1,3 +1,4 @@
+# Solución para el problema #36 de Project Euler
 # "Encuentra la suma de todos los números, menores que un millón, que son palíndromos en base 10 y base 2."
 # https://projecteuler.net/problem=36 
 
