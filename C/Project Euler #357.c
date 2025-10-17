@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-// EULER 357
+/* Solución para el problema #357 de Project Euler
+ * "Encuentra  la suma de todos los enteros positivos n que no excedan 100 000 000 tales que, para cada divisor d de n, d + n/d sea primo."
+ * https://projecteuler.net/problem=357                     */
 
 int isPrime(int n);
 int isPrimeGenerating(int n);
