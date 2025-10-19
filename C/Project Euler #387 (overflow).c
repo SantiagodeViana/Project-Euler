@@ -3,6 +3,7 @@
 #include <math.h>
 
 /* Solución para Project Euler #387
+ * "Encuentra la suma de los números primos fuertes y truncables a la derecha de Harshad menores que 10^14"
  * https://projecteuler.net/problem=387
  * Para i: 8004600031 Respuesta:36498117748 */
 
