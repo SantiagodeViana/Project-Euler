@@ -3,6 +3,9 @@
 #include <time.h>  // time()
 
 /* Solución para el problema #493 de Project Euler
+ * "Se colocan 70 bolas de colores en una urna, 10 por cada uno de los siete colores del arcoíris.
+ * ¿Cuál es el número esperado de colores distintos en 20 bolas elegidas al azar?
+ * Da tu respuesta con nueve dígitos después del punto decimal (a.bcdefghij)."
  * https://projecteuler.net/problem=493  */
 
 #define N 70
