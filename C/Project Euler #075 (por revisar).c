@@ -4,8 +4,10 @@
 #define N 1500000
 
 /* Solución para el problema #75 de Project Euler
- * "¿Cuántas cadenas, con un número inicial menor de un millón, contienen exactamente sesenta términos no repetidos?"
- * https://projecteuler.net/problem=75                     */
+ * "Dado que L es la longitud del alambre, 
+ * ¿para cuántos valores de L ≤ 1 500 000 se puede formar exactamente un triángulo rectángulo con lados enteros?"
+ * https://projecteuler.net/problem=75                    
+ * La versión actual del programa tarda demasiado en conseguir la respuesta        */
 
 int main()
 {
