@@ -3,6 +3,10 @@
 
 int isTriangle(long long int n);
 
+/* Solución para el problema #955 de Project Euler
+ * "Halla el índice n tal que a sea el septuagésimo número triangular de la secuencia."
+ * https://projecteuler.net/problem=955                     */
+
 int main()
 {
     int i = 0, t = 1; //t cuenta números triangulares
