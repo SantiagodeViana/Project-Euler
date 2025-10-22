@@ -4,6 +4,10 @@
 
 long long int pasosEuclides (long long int n, long long int m);
 
+/* Solución para el problema #958 de Project Euler
+ * "Encuentra f(10¹² + 39)."
+ * https://projecteuler.net/problem=958                     */
+
 int main()
 {//8191
     long long int n = 1000000000039, m = n, pasos = n, min = pasos, respuesta = m;
