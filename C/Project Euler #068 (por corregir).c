@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define N 6 //2RLTisJA
+#define N 6 
+
+/* Solución para el problema #68 de Project Euler
+ * "Usando los números del 1 al 10, y según la disposición, es posible formar cadenas de 16 y 17 dígitos.
+ * ¿Cuál es la cadena máxima de 16 dígitos para un anillo “mágico” de 5-gon?"
+ * https://projecteuler.net/problem=68                     */
 
 int main()
 {
