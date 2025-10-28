@@ -7,7 +7,7 @@
  * https://projecteuler.net/problem=49        */
 
 int isPrime(int n);
-int isPermutable (int n, int m);
+int isPermutable(int n, int m);
 
 int main(){
     int i, j, k, l=0;
