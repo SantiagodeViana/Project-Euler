@@ -4,20 +4,10 @@
 
 /* Solución para el problema #49 de Project Euler
  * "¿Qué número de 12 cifras se forma concatenando los tres términos de esta secuencia?"
- * https://projecteuler.net/problem=49
-
- * Conseguir tres números de 4 digitos, primos, que compartan dígitos
- * Actualmente el código muestra los números que comparten digitos, sin límite de la cantidad
- * Por ejemplo, un número puede tener un "9" y otro dos.
- * Sin embargo, las restricciones son tales que ofrece 26 posibilidades y permite discernir manualmente
- * El ejemplo es el número 4: 1497, 4817 y 8147
- * El resultado del problema es el número 7: 2969, 6299 y 9629
- * La diferencia entre ellos también parece ser 3330                  */
+ * https://projecteuler.net/problem=49        */
 
 int isPrime(int n);
 int isPermutable (int n, int m);
-
-//printf("%d", isPermutable (1234, 4321));
 
 int main(){
     int i, j, k, l=0;
@@ -77,65 +67,3 @@ int isPermutable(int n, int m){ //Se guardan los digitos del número
         }
     return 0;
 }
-
-/*
-//Código listo. No responde, confío en que depurando se puede resolver
-
-    void insertarDigitos(int *lista, int n);
-    int comprobarDigitos(int *lista, int n); //Se podría modificar la función para que reciba dos números en vez de un array
-    insertarDigitos(digitos, 1234);
-    comprobarDigitos(digitos, 4321); //Esta función no parece leer correctamente e array
-    int digitos[5] = {-1, 1, 2, 3, 4};
-    int ans1 = 0, ans2 = 0, ans3 = 0;
-    for (i=1000; i < 10000; i++){
-        if (isPrime(i) == 1){ //Sólo evaluar con números primos
-            insertarDigitos (digitos, i);
-            if (ans1 == 0) ans1 = i;
-            if (comprobarDigitos(digitos, i) == 1){ //Comprobar dígitos
-                if (ans2 == 0) ans2 = i;
-                else if (ans3 == 0) ans3 = i;
-            }
-            else{ //Se reinician los valores de no coincidir
-                ans1 = 0;
-                ans2 = 0;
-                ans3 = 0;
-            }
-            if (ans1 != 0 && ans2 != 0 && ans3 != 0){
-                printf("Respuestas: %2d %2d %2d", ans1, ans2, ans3);
-            }
-        }
-    }
-    */
-
-            /*
-            for (j=1; j <= 4; j++){
-                printf("%d\n", digitos[j]);
-            }
-            printf("\n");
-            */
-
-//printf("%d\n", digitos[j]);
-
-/*{
-    int i, j = 0;
-    for (i=1000; i < 10000; i++){
-        if (isPrime(i) == 1){
-            j++;
-            printf("%3d\n", i);
-        }
-    }
-    printf("Hay %d primos\n", j);
-    return 0;
-}
-
-    if (digitos[j] != 0){
-        while (digitos[j] == (i % 10)){
-            j++;
-            printf("%d\n", j);
-            if (j == 4) permut++;
-            else permut = 0;
-        }
-        if (digitos[j] != (i % 10)) digitos[] = {-1, -1, -1, -1, -1}
-        printf("\n");
-    } */
-
