@@ -5,12 +5,7 @@ int isPermutable(int n, int m, int length);
 
 /* Solución para el problema #52 de Project Euler
  * "Encuentra el menor número entero positivo, x, tal que 2x, 3x, 4x, 5x, y 6x, contengan los mismos dígitos."
- * https://projecteuler.net/problem=52
-
- * Condiciones:
- * Rango de dígitos
- * La multiplicación debe tener la misma cantidad de dígitos
-*/
+ * https://projecteuler.net/problem=52    */
 
 int main()
 {
