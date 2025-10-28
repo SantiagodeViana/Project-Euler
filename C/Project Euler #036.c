@@ -6,7 +6,7 @@
  * https://projecteuler.net/problem=36            */
 
 long long int binary(int n);
-int palindrome(long long int n); //Trae problemas de desbordamiento para binarios
+int isPalindrome(long long int n); //Trae problemas de desbordamiento para binarios
 int binaryPalindrome (int n);
 
 int main()
@@ -15,7 +15,7 @@ int main()
     long long int binario = 0;
     for (i = 1; i <= 1000000; i++){ //Se comprueban palíndromos base 2 y base 10 menores a un millón
         binario = binary(i);
-        if (palindrome(i) == 1){ //Si es palindromo base 10
+        if (isPalindrome(i) == 1){ //Si es palindromo base 10
             if (binaryPalindrome(i) == 1){
                 suma += i;
                 printf("Base 10: %d Base 2: %lld Suma: %d\n", i, binario, suma); //Si es palindromo base 2
@@ -52,7 +52,7 @@ long long int binary(int n){
     if (n == 1) binario++;
     return binario;
 }
-int palindrome(long long int n){ //Comprueba si es palíndromo
+int isPalindrome(long long int n){ //Comprueba si es palíndromo
     int i = 1, j, length = 0, digitos[20], temp = n; //En Euler 36 no se esperan tener valores mayores de 10^6 o 2^20.
     //Long long int debería presentar problemas cuando es mayor a 2^18
     //i es multiplicador de 10
