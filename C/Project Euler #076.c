@@ -3,9 +3,9 @@
 #include <math.h>
 
 /* Solución para el problema #76 de Project Euler
- * https://projecteuler.net/problem=76
- */
-
+ * "¿De cuántas formas diferentes se puede escribir el número cien como suma de al menos dos números enteros positivos?"
+ * https://projecteuler.net/problem=76                             */
+ 
 long long int partitions(int n, int k); //Devuelve el número de particiones de un n mediante un divide y vencerás. Diseñado para PE #76, #77 y #78
 
 int main()
