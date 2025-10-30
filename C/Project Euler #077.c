@@ -3,8 +3,8 @@
 #include <math.h>
 
 /* Solución para el problema #77 de Project Euler
- * https://projecteuler.net/problem=77
- */
+ * "¿Cuál es el primer valor que se puede escribir como la suma de números primos de más de cinco mil maneras diferentes?"
+ * https://projecteuler.net/problem=77                                  */
 
 int isPrime(int n);
 long long int partitions(int n, int k);
