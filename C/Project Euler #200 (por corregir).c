@@ -3,7 +3,10 @@
 
 int primeProof(int n);}
 
-//p^3 q^3, p && q primer = isSqube
+/* Solución para el problema #200 de Project Euler
+ * "Encuentra el sqube a prueba de primos número 200 que contenga la subcadena continua '200'."
+ * https://projecteuler.net/problem=200                 
+ * p^3 q^3, p && q primer = isSqube           */
 
 int main()
 {
