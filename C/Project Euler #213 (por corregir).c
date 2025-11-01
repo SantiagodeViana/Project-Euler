@@ -3,6 +3,10 @@
 
 #define N 30
 
+/* Solución para el problema #213 de Project Euler
+ * "¿Cuál es el número esperado de casillas desocupadas después de 50 toques de campana? Da tu respuesta redondeada a seis decimales."
+ * https://projecteuler.net/problem=213           */
+
 int main()
 {
     int circus[N-1][N-1] = {1, 1, 1, ..., 1};
