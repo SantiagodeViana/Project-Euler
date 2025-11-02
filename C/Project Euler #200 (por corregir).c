@@ -10,7 +10,6 @@ int primeProof(int n);}
 
 int main()
 {
-
     printf("Hello world!\n");
     return 0;
 }
