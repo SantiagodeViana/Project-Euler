@@ -5,6 +5,10 @@
 
 int isHamming (int n, int div);
 
+/* Solución para el problema #204 de Project Euler
+ * "¿Cuántos números de Hamming generalizados de tipo 100 hay que no excedan 10⁹?"
+ * https://projecteuler.net/problem=204       */
+
 int main()
 {
     int respuesta = 0;
