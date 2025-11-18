@@ -4,6 +4,10 @@
 
 int divSquareSum(int n);
 
+/* Solución para el problema #211 de Project Euler
+ * "¿Cuántos números de Hamming generalizados de tipo 100 hay que no excedan 10⁹?"
+ * https://projecteuler.net/problem=211       */
+
 int main()
 {
     int aux, respuesta = 0;
