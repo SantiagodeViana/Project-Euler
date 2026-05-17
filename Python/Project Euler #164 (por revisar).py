@@ -32,6 +32,7 @@ def main():
             print(f"n: {n}  Respuesta:{respuesta}")
     print(f"La respuesta es: {respuesta}")
 
+# 10000000031882000000  Respuesta:84838138
 
 if __name__ == "__main__":
     main()
