@@ -9,7 +9,7 @@ for x in range(1, 1500001):
             if xC + yC == zC:
                 respuesta += 1
                 print(f"Respuesta: {respuesta} - {x+y+z} - x: {x} y: {y} z: {z}")
-            # print(f"x: {x} y: {y} z: {z}")
+            print(f"x: {x} y: {y} z: {z}")
 
 print(f"La respuesta es: {respuesta}")
 print("Fin del programa.")
