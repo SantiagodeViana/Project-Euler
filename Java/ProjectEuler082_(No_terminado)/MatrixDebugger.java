@@ -3,7 +3,9 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-/** Observes copies of program state; never writes to the solver's arrays. */
+// Creado con IA
+// Observes copies of program state; never writes to the solver's arrays.
+
 public final class MatrixDebugger {
     private static MatrixDebugger instance;
     private final Object gate = new Object();
