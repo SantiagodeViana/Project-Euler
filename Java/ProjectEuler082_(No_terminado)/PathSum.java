@@ -29,7 +29,7 @@ public class PathSum {
                 else if (c == 2 && i < matriz.length - 1 && !visitados[i + 1][nivel]) i++;
                 MatrixDebugger.show(visitados, i, nivel, valorAcumulado, sol.getSolucion(), c, "After direction conditions; before visit condition"); // DEBUG
                 //Optimizando: aceptando solo pasos con posibles soluciones menores
-                if (!visitados[i][nivel] && (valorAcumulado < sol.getSolucion()) && (valorAcumulado < 150000)){ //150000 es un límite arbitrario que busca limitar búsquedas y conseguir una solución menor
+                if (!visitados[i][nivel] && (valorAcumulado < sol.getSolucion()) && (valorAcumulado < (i * 2500))){ //El valor de la celda es aproximadamente 5000
                     visitados[i][nivel] = true;
                     valorAcumulado += matriz[i][nivel];
                     MatrixDebugger.show(visitados, i, nivel, valorAcumulado, sol.getSolucion(), c, "Marked and added; before recursive call"); // DEBUG
