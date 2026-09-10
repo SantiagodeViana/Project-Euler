@@ -93,6 +93,8 @@ public class Main {
             }
         }
 
+        MatrixDebugger.open(matriz); // Visualizador
         System.out.println("La solución es final es: " + PathSum.minValor(matriz, visitados));
+        MatrixDebugger.finish();
     }
 }
