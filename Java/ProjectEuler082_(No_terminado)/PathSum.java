@@ -7,7 +7,7 @@ public class PathSum {
             valorAcumulado += matriz[i][0];
             System.out.println("Empezando desde fila " + i + "...");
             MatrixDebugger.show(visitados, i, 0, valorAcumulado, sol.getSolucion(), -1, "Start row marked; before initial recursive call"); // DEBUG
-            minValorAux(matriz, visitados, 0, 0, sol, valorAcumulado);
+            minValorAux(matriz, visitados, 0, i, sol, valorAcumulado);
             valorAcumulado -= matriz[i][0];
             visitados[i][0] = false;
             MatrixDebugger.show(visitados, i, 0, valorAcumulado, sol.getSolucion(), -1, "Start row unmarked"); // DEBUG
